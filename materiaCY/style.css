@@ -34,16 +34,29 @@ body {
     min-height: 100vh;
 }
 
+/* Tema Claro: fundo claro e blocos 100% opacos seguindo o padrão */
 body.tema-claro {
-    background: #f1f5f9;
+    background-color: #f1f5f9;
+    background-image: none;
     color: #0f172a;
+    --bg-card: #11192d;
     --texto-suave: #94a3b8;
+}
+
+body.tema-claro .hero-curso {
+    background: linear-gradient(145deg, #0f172a, #172554);
 }
 
 body.tema-claro header.topo,
 body.tema-claro footer.rodape {
     background: #060913;
     color: #94a3b8;
+}
+
+body.tema-claro .ementa-card,
+body.tema-claro .personagem-card,
+body.tema-claro .video-card {
+    background: #060913;
 }
 
 body.tema-claro .hero-curso p,

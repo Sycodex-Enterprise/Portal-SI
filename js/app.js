@@ -19,7 +19,7 @@ const disciplinas = [
     imagem: 'img/foto-APS2.png'
   },
   {
-    nome: 'Cibersegurança',
+    nome: 'Segurança de Sistemas',
     autores: 'Heloyse e Lidiane',
     url: 'materiaCY/index.html',
     imagem: 'img/foto-ciber.jpg'
@@ -39,7 +39,7 @@ const disciplinas = [
   {
     nome: 'Jogos Digitais',
     autores: 'Olavo e Henry',
-    url: 'disciplina-7.html',
+    url: 'materiaJD/index.html',
     imagem: 'img/foto-JOGOS.jpg'
   }
 ];
