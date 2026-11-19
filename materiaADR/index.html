@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Administração de Redes 1</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="../img/icon.png" type="image/x-icon">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <script>
+    if (localStorage.getItem('tema') === 'claro') {
+      document.body.classList.add('tema-claro');
+    }
+  </script>
+  <header class="topo">
+    <div class="container-topo">
+      <a href="../index.html" class="link-logo" aria-label="Sistemas de Informação - Início">
+        <img src="../img/logo-si.png" alt="Logo de Sistemas de Informação" class="logo-principal">
+      </a>
+      <nav aria-label="Navegação Principal">
+        <a href="../index.html">Início</a>
+        <button id="btn-tema" type="button">Tema</button>
+      </nav>
+    </div>
+  </header>
+  <main class="conteudo">
+    <section class="hero-curso">
+      <h1 class="titulo-onda">Administração de Redes 1</h1>
+      <p class="tema-claro">Feito por: Otávio Teodoro</p>
+    </section>
+
+    <!-- 1º Resumo da matéria: texto corrido -->
+    <section class="secao-materia secao-resumo">
+      <h2>Resumo da Matéria</h2>
+      <p class="resumo-abertura">
+        Administração de Redes 1 é a disciplina em que o aluno deixa de apenas <em>usar</em> a rede e passa a
+        <strong>planejar, configurar e manter</strong> a infraestrutura que conecta computadores, servidores e
+        pessoas dentro de uma organização. Ela parte dos modelos de referência OSI e TCP/IP para explicar, camada por
+        camada, como um dado sai de uma aplicação, é dividido em pacotes, recebe endereços e atravessa switches e
+        roteadores até chegar ao destino.
+      </p>
+      <p>
+        A partir dessa base, o foco se volta para o dia a dia do administrador. O endereçamento IPv4 é estudado em
+        profundidade, com cálculo de máscaras, divisão em sub-redes e uso de VLSM e CIDR para aproveitar bem cada
+        bloco de endereços; ao lado dele, o IPv6 aparece como a resposta definitiva ao esgotamento do IPv4 e como uma
+        realidade cada vez mais presente nas redes brasileiras. Também são trabalhados os equipamentos de
+        interconexão, a segmentação com VLANs e os princípios do roteamento estático e dinâmico.
+      </p>
+      <p>
+        Por fim, a disciplina apresenta os serviços que fazem uma rede funcionar de forma transparente para o
+        usuário — como DHCP, que distribui endereços automaticamente, DNS, que traduz nomes em IPs, e NAT, que
+        permite a muitas máquinas compartilharem um único endereço público — além das ferramentas de diagnóstico e
+        monitoramento (ping, traceroute, Wireshark, SNMP) e das boas práticas de documentação e segurança.
+      </p>
+      <blockquote class="resumo-destaque">
+        Uma rede bem administrada é aquela que ninguém percebe: ela simplesmente funciona, é segura e está
+        documentada para crescer.
+      </blockquote>
+    </section>
+
+    <!-- 2º Ementa: cards -->
+    <section class="secao-materia secao-ementa">
+      <h2>Ementa</h2>
+      <p class="secao-intro">Conteúdos trabalhados ao longo do semestre, organizados por unidade.</p>
+      <div class="ementa-grid">
+        <article class="ementa-card">
+          <span class="ementa-num">01</span>
+          <h3>Fundamentos da administração</h3>
+          <p>Papel do administrador de redes, topologias, tipos de rede (LAN, MAN, WAN) e meios de transmissão.</p>
+        </article>
+        <article class="ementa-card">
+          <span class="ementa-num">02</span>
+          <h3>Modelos OSI e TCP/IP</h3>
+          <p>Arquitetura em camadas, encapsulamento, PDUs e a relação entre protocolos e camadas.</p>
+        </article>
+        <article class="ementa-card">
+          <span class="ementa-num">03</span>
+          <h3>Endereçamento IPv4</h3>
+          <p>Classes, máscaras, endereços privados, cálculo de sub-redes, VLSM e CIDR.</p>
+        </article>
+        <article class="ementa-card">
+          <span class="ementa-num">04</span>
+          <h3>Introdução ao IPv6</h3>
+          <p>Estrutura do endereço, tipos de endereços, autoconfiguração e convivência com o IPv4.</p>
+        </article>
+        <article class="ementa-card">
+          <span class="ementa-num">05</span>
+          <h3>Switches, roteadores e VLANs</h3>
+          <p>Equipamentos de interconexão, domínios de colisão e broadcast, segmentação lógica com VLANs.</p>
+        </article>
+        <article class="ementa-card">
+          <span class="ementa-num">06</span>
+          <h3>Roteamento</h3>
+          <p>Tabela de rotas, roteamento estático e noções de protocolos dinâmicos como RIP e OSPF.</p>
+        </article>
+        <article class="ementa-card">
+          <span class="ementa-num">07</span>
+          <h3>Serviços de rede</h3>
+          <p>Configuração de DHCP, DNS e NAT em ambiente de laboratório e servidores Linux/Windows.</p>
+        </article>
+        <article class="ementa-card">
+          <span class="ementa-num">08</span>
+          <h3>Monitoramento e segurança</h3>
+          <p>Ferramentas de diagnóstico, SNMP, análise de tráfego, firewall, ACLs e documentação da rede.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3º Vídeos: carrossel -->
+    <section class="secao-materia secao-videos">
+      <h2>Vídeos</h2>
+      <p class="secao-intro">Aulas e explicações para revisar os principais temas da disciplina. Use as setas para navegar.</p>
+      <div class="carrossel" aria-roledescription="carrossel" aria-label="Vídeos sobre administração de redes">
+        <button class="carrossel-btn anterior" type="button" aria-label="Vídeo anterior">&#10094;</button>
+        <div class="carrossel-trilho" tabindex="0">
+          <figure class="video-slide">
+            <div class="video-moldura">
+              <iframe src="https://www.youtube.com/embed/bmgvIlvVAlc" title="O que é o modelo OSI? Guia definitivo" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <figcaption><strong>O que é o modelo OSI?</strong><span>Professora Nattane</span></figcaption>
+          </figure>
+          <figure class="video-slide">
+            <div class="video-moldura">
+              <iframe src="https://www.youtube.com/embed/h5JsGKLVLtg" title="Cálculo de sub-redes - aula prática" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <figcaption><strong>Cálculo de sub-redes – aula prática</strong><span>Hardware Redes Brasil</span></figcaption>
+          </figure>
+          <figure class="video-slide">
+            <div class="video-moldura">
+              <iframe src="https://www.youtube.com/embed/00v6x0f0q6A" title="DHCP e DNS: teoria e prática" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <figcaption><strong>DHCP e DNS: teoria e prática</strong><span>Descomplicando a TI</span></figcaption>
+          </figure>
+          <figure class="video-slide">
+            <div class="video-moldura">
+              <iframe src="https://www.youtube.com/embed/jmvZ4mewCJE" title="DNS - Domain Name System" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <figcaption><strong>DNS – Domain Name System</strong><span>NIC.br – Cidadão na Rede</span></figcaption>
+          </figure>
+          <figure class="video-slide">
+            <div class="video-moldura">
+              <iframe src="https://www.youtube.com/embed/VjTtrzK4GPA" title="Como funciona o roteamento estático e dinâmico" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <figcaption><strong>Roteamento estático e dinâmico</strong><span>Van Glauco</span></figcaption>
+          </figure>
+          <figure class="video-slide">
+            <div class="video-moldura">
+              <iframe src="https://www.youtube.com/embed/MqthiSZWPy0" title="Como e por que implantar IPv6 na minha empresa" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <figcaption><strong>Como e por que implantar IPv6</strong><span>NIC.br</span></figcaption>
+          </figure>
+        </div>
+        <button class="carrossel-btn proximo" type="button" aria-label="Próximo vídeo">&#10095;</button>
+      </div>
+      <div class="carrossel-pontos" aria-hidden="true"></div>
+    </section>
+
+    <!-- 4º Referências: lista ABNT agrupada em blocos expansíveis -->
+    <section class="secao-materia secao-referencias">
+      <h2>Referências</h2>
+      <p class="secao-intro">Normas ABNT NBR 6023. Clique em cada grupo para expandir.</p>
+
+      <details class="ref-grupo" open>
+        <summary>Livros <span class="ref-contagem">5</span></summary>
+        <ul class="ref-lista">
+          <li>COMER, Douglas E. <strong>Redes de computadores e Internet</strong>. 6. ed. Porto Alegre: Bookman, 2016.</li>
+          <li>FOROUZAN, Behrouz A. <strong>Comunicação de dados e redes de computadores</strong>. 4. ed. Porto Alegre: AMGH, 2010.</li>
+          <li>KUROSE, James F.; ROSS, Keith W. <strong>Redes de computadores e a Internet</strong>: uma abordagem top-down. 8. ed. São Paulo: Pearson, 2021.</li>
+          <li>NEMETH, Evi <em>et al.</em> <strong>UNIX and Linux system administration handbook</strong>. 5. ed. Boston: Addison-Wesley, 2017.</li>
+          <li>TANENBAUM, Andrew S.; FEAMSTER, Nick; WETHERALL, David J. <strong>Redes de computadores</strong>. 6. ed. Porto Alegre: Bookman, 2021.</li>
+        </ul>
+      </details>
+
+      <details class="ref-grupo">
+        <summary>Artigos científicos e documentos técnicos <span class="ref-contagem">5</span></summary>
+        <ul class="ref-lista">
+          <li>CERF, Vinton G.; KAHN, Robert E. A protocol for packet network intercommunication. <strong>IEEE Transactions on Communications</strong>, v. 22, n. 5, p. 637-648, maio 1974.</li>
+          <li>DEERING, Steve; HINDEN, Robert. <strong>RFC 8200</strong>: Internet Protocol, version 6 (IPv6) specification. [<em>S. l.</em>]: IETF, 2017. Disponível em: <a href="https://www.rfc-editor.org/rfc/rfc8200" target="_blank" rel="noopener">https://www.rfc-editor.org/rfc/rfc8200</a>. Acesso em: 12 nov. 2026.</li>
+          <li>DROMS, Ralph. <strong>RFC 2131</strong>: dynamic host configuration protocol. [<em>S. l.</em>]: IETF, 1997. Disponível em: <a href="https://www.rfc-editor.org/rfc/rfc2131" target="_blank" rel="noopener">https://www.rfc-editor.org/rfc/rfc2131</a>. Acesso em: 12 nov. 2026.</li>
+          <li>MOCKAPETRIS, Paul. <strong>RFC 1035</strong>: domain names – implementation and specification. [<em>S. l.</em>]: IETF, 1987. Disponível em: <a href="https://www.rfc-editor.org/rfc/rfc1035" target="_blank" rel="noopener">https://www.rfc-editor.org/rfc/rfc1035</a>. Acesso em: 12 nov. 2026.</li>
+          <li>REKHTER, Yakov <em>et al.</em> <strong>RFC 1918</strong>: address allocation for private internets. [<em>S. l.</em>]: IETF, 1996. Disponível em: <a href="https://www.rfc-editor.org/rfc/rfc1918" target="_blank" rel="noopener">https://www.rfc-editor.org/rfc/rfc1918</a>. Acesso em: 12 nov. 2026.</li>
+        </ul>
+      </details>
+
+      <details class="ref-grupo">
+        <summary>Notícias <span class="ref-contagem">3</span></summary>
+        <ul class="ref-lista">
+          <li>BRASIL atinge marca de 60% de usuários de Internet já com IPv6 habilitado. <strong>DPL News</strong>, 29 out. 2026. Disponível em: <a href="https://dplnews.com/brasil-atinge-marca-de-60-de-usuarios-de-internet-ja-com-ipv6-habilitado/" target="_blank" rel="noopener">https://dplnews.com/brasil-atinge-marca-de-60-de-usuarios-de-internet-ja-com-ipv6-habilitado/</a>. Acesso em: 12 nov. 2026.</li>
+          <li>MOREIRAS, Antonio M. Brazil's unified government portal now runs on IPv6: a milestone for the country's Internet. <strong>Blog LACNIC</strong>, 31 out. 2025. Disponível em: <a href="https://blog.lacnic.net/en/ipv6-brasil/" target="_blank" rel="noopener">https://blog.lacnic.net/en/ipv6-brasil/</a>. Acesso em: 12 nov. 2026.</li>
+          <li>PAULO, Danilo. Anatel aprova plano de ação para ampliar IPv6 no Brasil. <strong>Teletime</strong>, 17 out. 2024. Disponível em: <a href="https://teletime.com.br/17/10/2024/anatel-aprova-plano-de-acao-para-ampliar-ipv6-no-brasil/" target="_blank" rel="noopener">https://teletime.com.br/17/10/2024/anatel-aprova-plano-de-acao-para-ampliar-ipv6-no-brasil/</a>. Acesso em: 12 nov. 2026.</li>
+        </ul>
+      </details>
+    </section>
+  </main>
+  <footer class="rodape">
+    <p>&copy; 2026 Curso de Sistemas de Informação - Isulpar</p>
+  </footer>
+</body>
+
+</html>

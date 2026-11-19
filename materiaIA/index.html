@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inteligência Artificial Sistemas de Informação</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../img/icon.png" type="image/x-icon">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <script>
+        if (localStorage.getItem('tema') === 'claro') {
+            document.body.classList.add('tema-claro');
+        }
+    </script>
+    <header class="topo">
+        <div class="container-topo">
+            <a href="../index.html" class="link-logo" aria-label="Sistemas de Informação Inicio">
+                <img src="../img/logo-si.png" alt="Logo de Sistemas de Informação" class="logo-principal">
+            </a>
+            <nav aria-label="Navegação Principal">
+                <a href="../index.html">Inicio</a>
+                <button id="btn-tema" type="button">Tema</button>
+            </nav>
+        </div>
+    </header>
+    <main class="conteudo">
+        <section class="hero-curso">
+            <h1 class="titulo-onda">Inteligência Artificial</h1>
+            <p class="tema-claro">Feito por: Giancarlo e Pedro Rosa</p>
+        </section>
+
+        <!-- 1º RESUMO DA MATÉRIA -->
+        <section class="secao-materia secao-resumo">
+            <h2>Resumo</h2>
+            <div class="texto-resumo">
+                <p>
+                    A disciplina de <strong>Inteligência Artificial</strong> do curso de Sistemas de Informação da
+                    Isulpar prepara o estudante para encarar a revolução tecnológica de forma prática, crítica e
+                    profissional. Muito além de utilizar chatbots como meros geradores de texto, o aluno desenvolve a
+                    competência de solucionar problemas complexos do mundo real por meio de sistemas inteligentes e
+                    modelos generativos (como ChatGPT e Gemini).
+                </p>
+                <p>
+                    A abordagem didática foca no desenvolvimento de uma obra contínua e autoral, capacitando os futuros
+                    profissionais a estruturarem pedidos de alto nível técnico (Engenharia de Prompts), auditarem
+                    respostas contra alucinações e vieses algorítmicos, validarem informações com base em fontes
+                    fidedignas e integrarem ferramentas de IA com ética, segurança e responsabilidade humana no mercado
+                    de TI.
+                </p>
+            </div>
+        </section>
+
+        <!-- 2º EMENTA -->
+        <section class="secao-materia secao-ementa">
+            <h2>Ementa</h2>
+            <div class="grid-ementa">
+                <div class="card-topico">
+                    <h3>Fundamentos e IA Generativa</h3>
+                    <p>Conceitos essenciais, capacidades, limites, tratamento de incertezas e erros de sistemas de IA.
+                    </p>
+                </div>
+                <div class="card-topico">
+                    <h3>Engenharia de Instruções e Prompts</h3>
+                    <p>Formulação, testes comparativos, refinamento de contextos e restrições para obter saídas de alto
+                        nível.</p>
+                </div>
+                <div class="card-topico">
+                    <h3>Análise Crítica e Auditoria</h3>
+                    <p>Distinção entre fluência e evidência, identificação de alucinações (conteúdo inventado), falsa
+                        precisão e ambiguidades.</p>
+                </div>
+                <div class="card-topico">
+                    <h3>Pesquisa e Trabalho com Fontes</h3>
+                    <p>Uso de ambientes de IA baseados em documentos e síntese de informações sem tratar a IA como
+                        autoridade cega.</p>
+                </div>
+                <div class="card-topico">
+                    <h3>Ética, Segurança e Autoria</h3>
+                    <p>Privacidade de dados, segurança da informação, redução de vieses, rastreabilidade e
+                        responsabilidade humana no uso da tecnologia.</p>
+                </div>
+                <div class="card-topico">
+                    <h3>Projeto Prático e Contínuo</h3>
+                    <p>Desenvolvimento, documentação e defesa de uma solução assistida por IA para um problema real.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3° LIVROS E ARTIGOS (Organizado em Grade) -->
+        <section class="secao-materia secao-referencias">
+            <h2>Bibliografia</h2>
+            <p style="color: var(--texto-suave); margin-bottom: 24px; font-size: 0.95rem;">Leituras recomendadas para
+                expansão do conhecimento técnico sobre <strong>Inteligência Artificial</strong>.</p>
+
+            <!-- Container Grid Inline Blindado -->
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; width: 100%; box-sizing: border-box;">
+
+                <!-- Coluna 1: Livros -->
+                <div class="box-categoria"
+                    style="margin-bottom: 0; height: 100%; box-sizing: border-box; overflow-wrap: break-word; word-wrap: break-word; overflow: hidden;">
+                    <h3 class="subtitulo-categoria"><span class="badge-tag">Livros</span></h3>
+                    <ul class="lista-abnt">
+                        <li>TEIXEIRA, João. <a href="https://books.google.com.br/books?id=oDSZDwAAQBAJ" target="_blank"
+                                rel="noopener noreferrer" style="color: inherit; text-decoration: underline;"><strong>O
+                                    que é
+                                    inteligência artificial</strong></a>. 3. ed. e-galáxia, 2019.</li>
+                        <li>KAUFMAN, Dora. <a href="https://books.google.com.br/books?id=Fh-WDwAAQBAJ" target="_blank"
+                                rel="noopener noreferrer" style="color: inherit; text-decoration: underline;"><strong>A
+                                    inteligência artificial irá suplantar a inteligência humana?</strong></a>. 2019.
+                        </li>
+                        <li>SANTAELLA, Lucia. <a href="https://books.google.com.br/books?id=9HrxEAAAQBAJ"
+                                target="_blank" rel="noopener noreferrer"
+                                style="color: inherit; text-decoration: underline;"><strong>A
+                                    inteligência artificial é inteligente?</strong></a>. Edições 70, 2023.</li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 2: Artigos & Revistas -->
+                <div class="box-categoria"
+                    style="margin-bottom: 0; height: 100%; box-sizing: border-box; overflow-wrap: break-word; word-wrap: break-word; overflow: hidden;">
+                    <h3 class="subtitulo-categoria"><span class="badge-tag">Artigos e Revistas</span></h3>
+                    <ul class="lista-abnt">
+                        <li>ABT. <a href="https://abt-br.org.br/wp-content/uploads/2023/03/RTE_236.pdf#page=16"
+                                target="_blank" rel="noopener noreferrer"
+                                style="color: inherit; text-decoration: underline;"><strong>Revista
+                                    Tecnologia Educacional (Ed. 236, p. 16)</strong></a>. 2023.</li>
+                        <li>SILVA, K. R. da; et al. <a href="https://recima21.com.br/recima21/pt_BR/article/view/4353"
+                                target="_blank" rel="noopener noreferrer"
+                                style="color: inherit; text-decoration: underline;"><strong>Inteligência artificial e
+                                    seus impactos na educação: uma revisão sistemática</strong></a>. RECIMA21, 2023.
+                        </li>
+                        <li>REVISTA TÓPICOS. <a
+                                href="https://revistatopicos.com.br/artigos/o-impacto-do-uso-da-inteligencia-artificial-nos-processos-de-ensino-e-aprendizagem"
+                                target="_blank" rel="noopener noreferrer"
+                                style="color: inherit; text-decoration: underline;"><strong>O impacto do uso da
+                                    inteligência artificial nos processos de ensino e aprendizagem</strong></a>. 2024.
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4º VÍDEOS -->
+        <section class="secao-materia">
+            <h2>Vídeos</h2>
+
+            <!-- VÍDEO PRINCIPAL (Arquivo Local .mp4) -->
+            <article
+                style="display: flex; flex-wrap: wrap; gap: 24px; background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(0, 242, 254, 0.3); border-radius: 12px; padding: 24px; margin-bottom: 40px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);">
+
+                <!-- Lado Esquerdo: Player Local -->
+                <div style="flex: 1 1 400px; min-width: 300px;">
+                    <video controls preload="metadata"
+                        style="width: 100%; border-radius: 8px; border: 1px solid var(--borda-sutil); box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+                        <source src="videos/O que é inteligência artificial.mp4" type="video/mp4">
+                        O seu navegador não reproduz vídeo. <a
+                            href="videos/O que é inteligência artificial.mp4">Descarregue o vídeo aqui</a>.
+                    </video>
+                </div>
+
+                <!-- Lado Direito: Textos e Informações do Vídeo -->
+                <div style="flex: 1 1 300px; display: flex; flex-direction: column; justify-content: center;">
+                    <span class="badge-tag" style="width: fit-content; margin-bottom: 12px;">DOCUMENTÁRIO CNI</span>
+                    <h3 style="margin: 0 0 10px 0; color: #f1f5f9; font-size: 1.4rem;">O que é Inteligência Artificial?
+                        Fundamentos e Vieses</h3>
+                    <p style="color: var(--neon-ciano); font-size: 0.9rem; margin: 0 0 16px 0; font-weight: bold;">
+                        Indústria de A a Z · 2024</p>
+                    <p style="color: #cbd5e1; line-height: 1.6; font-size: 0.95rem; margin: 0;">
+                        Uma visão institucional e histórica sobre a Inteligência Artificial. Entenda como essa
+                        tecnologia foi criada, como se dá o seu aprendizado acelerado e por que o debate sobre ética,
+                        regulação e vieses algorítmicos é fundamental para os futuros profissionais de TI.
+                    </p>
+                </div>
+
+            </article>
+
+            <!-- OUTROS VÍDEOS EM CARDS -->
+            <div class="grid-videos">
+
+                <!-- VÍDEO 02 -->
+                <a href="https://www.youtube.com/watch?v=TwYuO6bsigQ" class="card-video" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="thumb-video">
+                        <img src="https://img.youtube.com/vi/TwYuO6bsigQ/mqdefault.jpg"
+                            alt="Engenharia de Prompt na Prática">
+                        <div class="btn-play">▶</div>
+                    </div>
+                    <div class="info-video">
+                        <h3>Engenharia de Prompt na Prática</h3>
+                        <p>Técnicas essenciais de comunicação eficaz, estruturação e limites para obter saídas de alto
+                            padrão.</p>
+                    </div>
+                </a>
+
+                <!-- VÍDEO 03 -->
+                <a href="https://www.youtube.com/watch?v=5HP_w-Rtoqc" class="card-video" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="thumb-video">
+                        <img src="https://img.youtube.com/vi/5HP_w-Rtoqc/mqdefault.jpg"
+                            alt="Ética, Rastreabilidade & Segurança">
+                        <div class="btn-play">▶</div>
+                    </div>
+                    <div class="info-video">
+                        <h3>Ética, Rastreabilidade & Segurança</h3>
+                        <p>Privacidade, prevenção contra vazamentos de dados, viés algorítmico e responsabilidade
+                            profissional.</p>
+                    </div>
+                </a>
+
+                <!-- VÍDEO 04 -->
+                <a href="https://www.youtube.com/watch?v=IH-wBijX53M" class="card-video" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="thumb-video">
+                        <img src="https://img.youtube.com/vi/IH-wBijX53M/mqdefault.jpg"
+                            alt="Solução Prática de Problemas">
+                        <div class="btn-play">▶</div>
+                    </div>
+                    <div class="info-video">
+                        <h3>Solução Prática de Problemas</h3>
+                        <p>Aplicação hands-on de inteligência artificial na resolução de desafios reais e fluxos de TI.
+                        </p>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+    <!-- 5° REFERÊNCIAS (Padrão ABNT) -->
+    <section class="secao-materia secao-referencias">
+        <h2>Referências</h2>
+    
+        <div class="box-categoria">
+            <h3 class="subtitulo-categoria"><span class="badge-tag">Bibliografia</span></h3>
+            <ul class="lista-abnt">
+                <li>ASSOCIAÇÃO BRASILEIRA DE TECNOLOGIA EDUCACIONAL (ABT). <strong>Revista Tecnologia Educacional</strong>,
+                    ed. 236, p. 16, 2023. Disponível em: &lt;<a
+                        href="https://abt-br.org.br/wp-content/uploads/2023/03/RTE_236.pdf#page=16" target="_blank"
+                        rel="noopener noreferrer"
+                        style="color: var(--neon-ciano); text-decoration: underline;">https://abt-br.org.br/wp-content/uploads/2023/03/RTE_236.pdf</a>&gt;.
+                    Acesso em: 07 nov. 2026.</li>
+                <li>KAUFMAN, Dora. <strong>A inteligência artificial irá suplantar a inteligência humana?</strong>. 1. ed.
+                    São Paulo: Estação das Letras e Cores, 2019. Disponível em: &lt;<a
+                        href="https://books.google.com.br/books?id=Fh-WDwAAQBAJ" target="_blank" rel="noopener noreferrer"
+                        style="color: var(--neon-ciano); text-decoration: underline;">https://books.google.com.br/books?id=Fh-WDwAAQBAJ</a>&gt;.
+                    Acesso em: 07 nov. 2026.</li>
+                <li>REVISTA TÓPICOS. <strong>O impacto do uso da inteligência artificial nos processos de ensino e
+                        aprendizagem</strong>. 2024. Disponível em: &lt;<a
+                        href="https://revistatopicos.com.br/artigos/o-impacto-do-uso-da-inteligencia-artificial-nos-processos-de-ensino-e-aprendizagem"
+                        target="_blank" rel="noopener noreferrer"
+                        style="color: var(--neon-ciano); text-decoration: underline;">https://revistatopicos.com.br/artigos/o-impacto-do-uso-da-inteligencia-artificial-nos-processos-de-ensino-e-aprendizagem</a>&gt;.
+                    Acesso em: 07 nov. 2026.</li>
+                <li>SANTAELLA, Lucia. <strong>A inteligência artificial é inteligente?</strong>. São Paulo: Edições 70,
+                    2023. Disponível em: &lt;<a href="https://books.google.com.br/books?id=9HrxEAAAQBAJ" target="_blank"
+                        rel="noopener noreferrer"
+                        style="color: var(--neon-ciano); text-decoration: underline;">https://books.google.com.br/books?id=9HrxEAAAQBAJ</a>&gt;.
+                    Acesso em: 07 nov. 2026.</li>
+                <li>SILVA, K. R. da; et al. <strong>Inteligência artificial e seus impactos na educação: uma revisão
+                        sistemática</strong>. RECIMA21 - Revista Científica Multidisciplinar, 2023. Disponível em: &lt;<a
+                        href="https://recima21.com.br/recima21/pt_BR/article/view/4353" target="_blank"
+                        rel="noopener noreferrer"
+                        style="color: var(--neon-ciano); text-decoration: underline;">https://recima21.com.br/recima21/pt_BR/article/view/4353</a>&gt;.
+                    Acesso em: 07 nov. 2026.</li>
+                <li>TEIXEIRA, João de Fernandes. <strong>O que é inteligência artificial</strong>. 3. ed. São Paulo:
+                    e-galáxia, 2019. Disponível em: &lt;<a href="https://books.google.com.br/books?id=oDSZDwAAQBAJ"
+                        target="_blank" rel="noopener noreferrer"
+                        style="color: var(--neon-ciano); text-decoration: underline;">https://books.google.com.br/books?id=oDSZDwAAQBAJ</a>&gt;.
+                    Acesso em: 07 nov. 2026.</li>
+            </ul>
+        </div>
+    
+        <div class="box-categoria">
+            <h3 class="subtitulo-categoria"><span class="badge-tag">Vídeos</span></h3>
+            <ul class="lista-abnt">
+                <li>O que é inteligência artificial? | Indústria da A a Z (Ep. #27). Canal: CNI. YouTube, 2024. Disponível
+                    em: &lt;<a href="https://www.youtube.com/watch?v=lZqSUSewvKU" target="_blank" rel="noopener noreferrer"
+                        style="color: var(--neon-ciano); text-decoration: underline;">https://www.youtube.com/watch?v=lZqSUSewvKU</a>&gt;.
+                    Acesso em: 07 nov. 2026.</li>
+                <li>ENGENHARIA DE PROMPT | Tudo Que Você Precisa Saber. Canal: Adriano Couto. YouTube, 2026. Disponível em:
+                    &lt;<a href="https://www.youtube.com/watch?v=TwYuO6bsigQ" target="_blank" rel="noopener noreferrer"
+                        style="color: var(--neon-ciano); text-decoration: underline;">https://www.youtube.com/watch?v=TwYuO6bsigQ</a>&gt;.
+                    Acesso em: 07 nov. 2026.</li>
+                <li>ÉTICA, Rastreabilidade & Segurança. YouTube, 2024. Disponível em: &lt;<a
+                        href="https://www.youtube.com/watch?v=5HP_w-Rtoqc" target="_blank" rel="noopener noreferrer"
+                        style="color: var(--neon-ciano); text-decoration: underline;">https://www.youtube.com/watch?v=5HP_w-Rtoqc</a>&gt;.
+                    Acesso em: 07 nov. 2026.</li>
+                <li>SOLUÇÃO Prática de Problemas. YouTube, 2024. Disponível em: &lt;<a
+                        href="https://www.youtube.com/watch?v=IH-wBijX53M" target="_blank" rel="noopener noreferrer"
+                        style="color: var(--neon-ciano); text-decoration: underline;">https://www.youtube.com/watch?v=IH-wBijX53M</a>&gt;.
+                    Acesso em: 07 nov. 2026.</li>
+            </ul>
+        </div>
+    
+    </section>
+    </main>
+    <footer class="rodape">
+        <p>&copy; 2026 Curso de Sistemas de Informação Isulpar</p>
+    </footer>
+</body>
+
+</html>

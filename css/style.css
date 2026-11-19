@@ -1,0 +1,636 @@
+:root {
+  --bg-escuro-1: #060913;
+  /* Azul abissal para o degradê de fundo */
+  --bg-escuro-2: #0f172a;
+  /* Azul noturno intermediário */
+  --bg-card: rgba(17, 25, 45, 0.85);
+  /* Fundo dos cards levemente translúcido */
+
+  --neon-ciano: #00f2fe;
+  /* Ciano Neon (Destaque principal e bordas) */
+  --neon-azul: #4facfe;
+  /* Azul Elétrico */
+  --neon-roxo: #7c3aed;
+  /* Roxo Neon para degradês secundários */
+
+  --gradiente-neon: linear-gradient(90deg, #00f2fe 0%, #4facfe 50%, #7c3aed 100%);
+  --gradiente-botao: linear-gradient(135deg, #0284c7 0%, #6366f1 100%);
+  --gradiente-botao-hover: linear-gradient(135deg, #00f2fe 0%, #7c3aed 100%);
+
+  --texto-claro: #f1f5f9;
+  /* Branco suave para leitura confortável */
+  --texto-suave: #94a3b8;
+  /* Cinza azulado para legendas e autores */
+  --borda-sutil: rgba(0, 242, 254, 0.22);
+  /* Borda fina com toque neon */
+  --foco: #f59e0b;
+  /* Amarelo de acessibilidade (Tecla Tab) */
+}
+
+/* 2. RESET E PLANO DE FUNDO COM DEGRADÊ NEON */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, Arial, sans-serif;
+  color: var(--texto-claro);
+  background-color: var(--bg-escuro-1);
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(0, 242, 254, 0.14) 0%, transparent 38%),
+    radial-gradient(circle at 88% 82%, rgba(124, 58, 237, 0.16) 0%, transparent 42%),
+    linear-gradient(160deg, var(--bg-escuro-1) 0%, var(--bg-escuro-2) 55%, #090d1a 100%);
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Tema Claro: muda a cor de fundo da página e deixa os blocos 100% opacos */
+body.tema-claro {
+  background-color: #f1f5f9;
+  background-image: none;
+  --bg-card: #11192d;
+  /* Substitui o rgba(17, 25, 45, 0.85) por cor sólida */
+}
+
+body.tema-claro .hero-curso {
+  background: linear-gradient(145deg, #0f172a, #172554);
+  /* Sem transparência */
+}
+
+body.tema-claro header.topo {
+  background: #060913;
+  /* Cabeçalho 100% sólido */
+}
+
+/* 3. HEADER (CABEÇALHO) E LOGO ATUALIZADA */
+header.topo {
+  background: rgba(6, 9, 19, 0.88);
+  backdrop-filter: blur(10px);
+  color: var(--texto-claro);
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--borda-sutil);
+  box-shadow: 0 4px 25px rgba(0, 242, 254, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container-topo {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.link-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.25s ease;
+  background: transparent !important;
+}
+
+.link-logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-principal,
+.logo-svg {
+  height: 52px;
+  width: auto;
+  display: block;
+  background-color: transparent !important;
+  mix-blend-mode: screen;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  filter: drop-shadow(0 0 8px rgba(0, 242, 254, 0.45));
+}
+
+.logo-curso {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(0, 242, 254, 0.65);
+}
+
+header.topo nav a,
+header.topo nav button {
+  color: var(--texto-claro);
+  text-decoration: none;
+  margin-left: 22px;
+  font-weight: 600;
+  font-family: inherit;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+header.topo nav a:hover,
+header.topo nav button:hover {
+  color: var(--neon-ciano);
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.8);
+}
+
+/* 4. GRANDE TÍTULO DO CURSO (HERO SISTEMAS DE INFORMAÇÃO) */
+main {
+  width: min(1100px, 92%);
+  margin: 36px auto;
+  flex: 1;
+}
+
+.hero-curso {
+  text-align: center;
+  padding: 44px 24px;
+  margin-bottom: 38px;
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(23, 37, 84, 0.6));
+  border-radius: 16px;
+  border: 1px solid var(--borda-sutil);
+  border-bottom: 3px solid var(--neon-ciano);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 0 20px rgba(0, 242, 254, 0.1);
+}
+
+.hero-curso h1 {
+  display: inline-block;
+  font-size: 2.8rem;
+  margin: 0 0 14px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 900;
+
+  /* Degradê com cores vivas e efeito de onda em movimento */
+  background: linear-gradient(90deg,
+      #00ffff 0%,
+      #2563eb 25%,
+      #c084fc 50%,
+      #ec4899 75%,
+      #00ffff 100%);
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 16px rgba(0, 242, 254, 0.45));
+  animation: ondaCores 3s ease-in-out infinite alternate;
+}
+
+@keyframes ondaCores {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.hero-curso p {
+  font-size: 1.12rem;
+  color: var(--texto-suave);
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* 5. CSS GRID E CARDS DAS MATÉRIAS */
+.grade {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+/* Centraliza o 7º (último) card na coluna 2 (meio) no desktop */
+.grade .card:last-child {
+  grid-column: 2;
+}
+
+.card {
+  background: var(--bg-card);
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  border: 1px solid var(--borda-sutil);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: var(--neon-ciano);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.6), 0 0 18px rgba(0, 242, 254, 0.35);
+}
+
+.card-img-wrapper {
+  width: 100%;
+  height: 175px;
+  background-color: #090d1a;
+  overflow: hidden;
+  border-bottom: 1px solid var(--borda-sutil);
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.card:hover .card-img {
+  transform: scale(1.07);
+  filter: brightness(1.1);
+}
+
+.card-corpo {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  transition: color 0.25s ease;
+}
+
+.card:hover h2 {
+  color: var(--neon-ciano);
+}
+
+.card-autores {
+  font-size: 0.92rem;
+  color: var(--texto-suave);
+  margin: 0 0 22px 0;
+  flex: 1;
+}
+
+/* 6. BOTÕES COM DEGRADÊ E ACESSIBILIDADE */
+.botao {
+  display: inline-block;
+  text-align: center;
+  padding: 12px 18px;
+  background: var(--gradiente-botao);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+  transition: all 0.3s ease;
+}
+
+.botao:hover {
+  background: var(--gradiente-botao-hover);
+  box-shadow: 0 0 18px rgba(0, 242, 254, 0.65);
+  transform: translateY(-2px);
+  color: #060913;
+}
+
+.botao:active {
+  transform: scale(0.98);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 4px solid var(--foco);
+  outline-offset: 3px;
+}
+
+/* 7. ESTILIZAÇÃO DAS PÁGINAS INTERNAS DAS MATÉRIAS */
+.conteudo a {
+  color: var(--neon-ciano);
+  text-decoration: underline;
+}
+
+.conteudo a.link-voltar {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--neon-ciano);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.conteudo a:hover {
+  color: var(--neon-azul);
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0 28px 0;
+}
+
+.menu a {
+  background: rgba(15, 23, 42, 0.9);
+  color: var(--texto-claro);
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--borda-sutil);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.menu a:hover {
+  background: var(--gradiente-botao);
+  color: #ffffff;
+  border-color: var(--neon-ciano);
+  box-shadow: 0 0 12px rgba(0, 242, 254, 0.4);
+}
+
+section,
+section.secao-materia {
+  padding: 20px 24px;
+  margin: 20px 0;
+  background: var(--bg-card);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-left: 4px solid var(--neon-ciano);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+section h2 {
+  color: var(--neon-ciano);
+  margin-top: 0;
+}
+
+.img-conteudo {
+  display: block;
+  margin: 18px auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--borda-sutil);
+}
+
+/* 8. FOOTER (RODAPÉ) */
+footer.rodape {
+  background: rgba(6, 9, 19, 0.95);
+  color: var(--texto-suave);
+  text-align: center;
+  padding: 24px;
+  margin-top: 48px;
+  border-top: 1px solid var(--borda-sutil);
+  font-size: 0.95rem;
+}
+
+/* 9. RESPONSIVIDADE (MEDIA QUERIES) */
+@media (max-width: 850px) {
+  .grade {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Em 2 colunas, desfaz a fixação na coluna 2 para fluir naturalmente */
+  .grade .card:last-child {
+    grid-column: auto;
+  }
+
+  .hero-curso h1 {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .grade {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-principal,
+  .logo-svg {
+    height: 44px;
+  }
+
+  .hero-curso h1 {
+    font-size: 1.7rem;
+  }
+}
+
+/* ==========================================================================
+   10. EFEITO DE ONDA DE CORES DENTRO DO TÍTULO DAS MATÉRIAS (TEXTO FIXO)
+   ========================================================================== */
+.hero-curso h1.titulo-onda {
+  display: inline-block;
+  /* Degradê com cores neon mais vivas e contrastantes para destacar a onda */
+  background: linear-gradient(90deg,
+      #00ffff 0%,
+      #2563eb 25%,
+      #c084fc 50%,
+      #ec4899 75%,
+      #00ffff 100%);
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 16px rgba(0, 242, 254, 0.45));
+
+  /* Move apenas as cores de um lado para o outro sem mexer a posição das letras */
+  animation: ondaCores 3s ease-in-out infinite alternate;
+}
+
+@keyframes ondaCores {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* ==========================================================================
+   11. SEÇÃO CRUD DE FEEDBACK DOS VISITANTES
+   ========================================================================== */
+.secao-crud {
+  margin-top: 48px;
+  padding: 28px;
+  background: var(--bg-card);
+  border-radius: 14px;
+  border: 1px solid var(--borda-sutil);
+  border-left: 4px solid var(--neon-ciano);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.crud-subtitulo {
+  color: var(--texto-suave);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.crud-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.crud-form input,
+.crud-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: rgba(6, 9, 19, 0.75);
+  border: 1px solid var(--borda-sutil);
+  border-radius: 8px;
+  color: var(--texto-claro);
+  font-family: inherit;
+  font-size: 0.98rem;
+  resize: vertical;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.crud-form input:focus,
+.crud-form textarea:focus {
+  outline: none;
+  border-color: var(--neon-ciano);
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.25);
+}
+
+.crud-rodape-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contador {
+  font-size: 0.88rem;
+  color: var(--texto-suave);
+}
+
+.crud-botoes-form {
+  display: flex;
+  gap: 10px;
+}
+
+.botao-secundario {
+  padding: 12px 18px;
+  background: transparent;
+  color: var(--texto-claro);
+  border: 1px solid var(--borda-sutil);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.botao-secundario:hover {
+  border-color: var(--neon-ciano);
+  color: var(--neon-ciano);
+}
+
+.lista-feedbacks {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.feedback-item {
+  background: rgba(6, 9, 19, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 16px 18px;
+}
+
+.feedback-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.feedback-autor {
+  font-weight: 700;
+  color: var(--neon-ciano);
+}
+
+.feedback-data {
+  font-size: 0.82rem;
+  color: var(--texto-suave);
+}
+
+.feedback-texto {
+  margin: 0 0 12px 0;
+  color: var(--texto-claro);
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.feedback-acoes {
+  display: flex;
+  gap: 10px;
+}
+
+.lista-feedbacks {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-height: 300px;
+  /* Altura ideal para exibir cerca de 2 comentários */
+  overflow-y: auto;
+  padding-right: 8px;
+  /* Espaço para a barra não encostar nos cards */
+}
+
+/* Barra de rolagem estilizada no padrão Dark Neon */
+.lista-feedbacks::-webkit-scrollbar {
+  width: 6px;
+}
+
+.lista-feedbacks::-webkit-scrollbar-track {
+  background: rgba(6, 9, 19, 0.5);
+  border-radius: 6px;
+}
+
+.lista-feedbacks::-webkit-scrollbar-thumb {
+  background: var(--borda-sutil);
+  border-radius: 6px;
+}
+
+.lista-feedbacks::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-ciano);
+}
+
+.btn-acao {
+  background: transparent;
+  border: 1px solid var(--borda-sutil);
+  color: var(--texto-claro);
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-acao.editar:hover {
+  border-color: var(--neon-azul);
+  color: var(--neon-azul);
+}
+
+.btn-acao.excluir:hover {
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.feedback-vazio {
+  text-align: center;
+  color: var(--texto-suave);
+  font-style: italic;
+  margin: 10px 0 0 0;
+}

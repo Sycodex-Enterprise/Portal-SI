@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nome da Matéria</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="../img/icon.png" type="image/x-icon">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <script>
+    if (localStorage.getItem('tema') === 'claro') {
+      document.body.classList.add('tema-claro');
+    }
+  </script>
+  <header class="topo">
+    <div class="container-topo">
+      <a href="../index.html" class="link-logo" aria-label="Sistemas de Informação - Início">
+        <img src="../img/logo-si.png" alt="Logo de Sistemas de Informação" class="logo-principal">
+      </a>
+      <nav aria-label="Navegação Principal">
+        <a href="../index.html">Início</a>
+        <button id="btn-tema" type="button">Tema</button>
+      </nav>
+    </div>
+  </header>
+  <main class="conteudo">
+    <section class="hero-curso">
+      <h1 class="titulo-onda">Nome da Matéria</h1>
+      <p class="tema-claro">Feito por: Nome do Aluno 1 e Nome do Aluno 2</p>
+    </section>
+  </main>
+  <footer class="rodape">
+    <p>&copy; 2026 Curso de Sistemas de Informação - Isulpar</p>
+  </footer>
+</body>
+
+</html>

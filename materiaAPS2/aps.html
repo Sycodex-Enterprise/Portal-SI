@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Análise e Projeto de Sistemas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../img/icon.png" type="image/x-icon">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <script>
+      if (localStorage.getItem('tema') === 'claro') {
+          document.body.classList.add('tema-claro');
+      }
+    </script>
+    <header class="topo">
+      <div class="container-topo">
+          <a href="../index.html" class="link-logo" aria-label="Sistemas de Informação - Início">
+            <img src="../img/logo-si.png" alt="Logo de Sistemas de Informação" class="logo-principal">
+          </a>
+          <nav aria-label="Navegação Principal">
+            <a href="../index.html">Início</a>
+            <button id="btn-tema" type="button">Tema</button>
+        </nav>
+      </div>
+    </header>
+    <main class="conteudo">
+      <section class="hero-curso">
+        <h1 class="titulo-onda">Análise e Projeto de Sistemas</h1>
+        <p class="tema-claro">Feito por: Vinícius</p>
+        <ul class="info-materia" aria-label="Informações da disciplina">
+        </ul>
+      </section>
+
+      <!-- ===== 1. RESUMO DA MATÉRIA (texto corrido) ===== -->
+      <section class="secao-materia" id="resumo">
+        <h2>Resumo da matéria</h2>
+        <div class="resumo-texto">
+          <p>Análise e Projeto de Sistemas é a disciplina que estuda o caminho de um software antes do código: entender o problema, decidir como resolvê-lo e registrar essas decisões de forma que toda a equipe compreenda. Grande parte das falhas de um sistema não nasce na programação, mas em um requisito vago, em uma regra de negócio mal interpretada ou em uma classe que acumula responsabilidades demais. É essa dificuldade, que Brooks (1987) chamou de essencial, que a disciplina ensina a enfrentar.</p>
+          <p>Na <strong>análise</strong>, a equipe levanta e refina os requisitos até que sejam claros e verificáveis, identifica os conceitos do negócio e representa quem usa o sistema e para quê por meio de diagramas de casos de uso. No <strong>projeto</strong>, esse entendimento se transforma em uma solução orientada a objetos: diagramas de classes com atributos, operações e relacionamentos, distribuição de responsabilidades com cartões CRC, busca de alta coesão e baixo acoplamento e aplicação de padrões de projeto como Adapter, Facade, Observer e Strategy. A UML é a linguagem comum que permite desenhar, discutir e revisar essas decisões antes de programar.</p>
+          <p>O fio condutor de todo o conteúdo é a <strong>rastreabilidade</strong>: cada decisão de projeto deve estar ligada a um requisito, e cada requisito a um teste. Assim, quando o cliente muda uma regra, a equipe sabe exatamente o que precisa ser revisto. As aulas usam metodologias ativas, em que cada conceito é aplicado em casos práticos, como sistemas de reservas, ordens de serviço e lojas virtuais.</p>
+        </div>
+        <ol class="fluxo" aria-label="Caminho que a disciplina percorre, do problema ao teste">
+          <li><strong>Necessidade</strong><span>Por quê?</span></li>
+          <li><strong>Requisito</strong><span>O quê?</span></li>
+          <li><strong>Domínio</strong><span>Quais conceitos?</span></li>
+          <li><strong>Projeto</strong><span>Quais classes?</span></li>
+          <li><strong>Comportamento</strong><span>Como interagem?</span></li>
+          <li><strong>Teste</strong><span>Como comprovar?</span></li>
+        </ol>
+        <p class="fluxo-legenda apoio">A rastreabilidade liga cada decisão ao longo de todo o caminho.</p>
+        <ul class="palavras-chave" aria-label="Palavras-chave">
+          <li>Palavras-chave:</li>
+          <li>requisitos</li>
+          <li>rastreabilidade</li>
+          <li>UML</li>
+          <li>projeto orientado a objetos</li>
+          <li>padrões de projeto</li>
+        </ul>
+      </section>
+
+      <!-- ===== 2. EMENTA (carrossel de cartões) ===== -->
+      <section class="secao-materia" id="ementa">
+        <h2>Ementa</h2>
+        <div class="ementa-topo">
+          <p class="apoio">Conteúdo programático organizado em seis unidades. Use as setas ou arraste para o lado.</p>
+          <div class="carrossel-controles">
+            <button type="button" id="ementa-anterior" aria-controls="carrossel-ementa" aria-label="Unidade anterior">‹</button>
+            <button type="button" id="ementa-proximo" aria-controls="carrossel-ementa" aria-label="Próxima unidade">›</button>
+          </div>
+        </div>
+        <ol class="carrossel" id="carrossel-ementa" tabindex="0" aria-label="Unidades da ementa">
+          <li class="unidade">
+            <span class="num-grande" aria-hidden="true">01</span>
+            <span class="num-unidade">Unidade 1</span>
+            <h3>Engenharia de Software e casos de uso</h3>
+            <ul>
+              <li>Qualidade, produtividade e crise do software</li>
+              <li>Processo de software e ciclos de vida: cascata, incremental e espiral</li>
+              <li>Diagrama de casos de uso: atores, «include», «extend» e generalização</li>
+            </ul>
+          </li>
+          <li class="unidade">
+            <span class="num-grande" aria-hidden="true">02</span>
+            <span class="num-unidade">Unidade 2</span>
+            <h3>Requisitos, domínio e rastreabilidade</h3>
+            <ul>
+              <li>Requisitos funcionais, não funcionais e regras de negócio</li>
+              <li>Clareza, atomicidade, consistência e verificabilidade</li>
+              <li>Modelo de domínio e matriz de rastreabilidade</li>
+            </ul>
+          </li>
+          <li class="unidade">
+            <span class="num-grande" aria-hidden="true">03</span>
+            <span class="num-unidade">Unidade 3</span>
+            <h3>UML avançada</h3>
+            <ul>
+              <li>Diagrama de classes de projeto e visibilidade</li>
+              <li>Associação, multiplicidade, composição, generalização, interface e dependência</li>
+              <li>Diagramas de sequência, atividades e estados</li>
+            </ul>
+          </li>
+          <li class="unidade">
+            <span class="num-grande" aria-hidden="true">04</span>
+            <span class="num-unidade">Unidade 4</span>
+            <h3>Projeto orientado a objetos</h3>
+            <ul>
+              <li>Responsabilidades de conhecer e de fazer</li>
+              <li>Coesão, acoplamento e modularidade</li>
+              <li>Cartões CRC e o anti-padrão God Class</li>
+            </ul>
+          </li>
+          <li class="unidade">
+            <span class="num-grande" aria-hidden="true">05</span>
+            <span class="num-unidade">Unidade 5</span>
+            <h3>Padrões de projeto</h3>
+            <ul>
+              <li>Estruturais: Adapter e Facade</li>
+              <li>Comportamentais: Observer e Strategy</li>
+              <li>Testes automatizados para validar o comportamento</li>
+            </ul>
+          </li>
+          <li class="unidade">
+            <span class="num-grande" aria-hidden="true">06</span>
+            <span class="num-unidade">Unidade 6</span>
+            <h3>Arquitetura Full Stack e qualidade</h3>
+            <ul>
+              <li>Diagramas de componentes e de implantação</li>
+              <li>Jornada da requisição: interface → API → banco de dados</li>
+              <li>Refatoração, dívida técnica e Design Review</li>
+            </ul>
+          </li>
+        </ol>
+        <div class="carrossel-pontos" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+        <div class="ementa-objetivos">
+          <div>
+            <h3>Objetivo geral</h3>
+            <p>Capacitar o estudante a analisar, modelar e projetar sistemas de software, justificando as decisões de projeto com base em requisitos, responsabilidades e atributos de qualidade.</p>
+          </div>
+          <div>
+            <h3>Competências desenvolvidas</h3>
+            <ul>
+              <li>Refinar requisitos e torná-los verificáveis</li>
+              <li>Modelar estrutura e comportamento em UML</li>
+              <li>Distribuir responsabilidades com coesão e baixo acoplamento</li>
+              <li>Aplicar padrões de projeto e avaliar arquiteturas</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 3. VÍDEOS (destaque + grade de cartões) ===== -->
+      <section class="secao-materia" id="videos">
+        <h2>Vídeos</h2>
+        <p class="apoio">Um vídeo produzido para esta página e três vídeos didáticos em português que acompanham a sequência da disciplina: casos de uso, diagrama de classes e padrões de projeto.</p>
+
+        <article class="video-destaque">
+          <div>
+            <video controls preload="metadata" poster="videos/casos-de-uso-lara-capa.jpg" aria-describedby="lara-roteiro">
+              <source src="videos/casos-de-uso-lara.mp4" type="video/mp4">
+              Seu navegador não reproduz vídeo. <a href="videos/casos-de-uso-lara.mp4">Baixe o vídeo</a>.
+            </video>
+          </div>
+          <div>
+            <span class="selo">Produção própria · simulação didática</span>
+            <h3>Casos de Uso: a história da Lara</h3>
+            <p class="ficha">Roteiro próprio, animação gerada no Google NotebookLM · 7 min · 2026</p>
+            <p>Na véspera da prova, Lara não encontra o material da disciplina. A turma decide criar um portal e, antes de escolher as cores, monta no quadro o diagrama de casos de uso: fronteira do sistema, atores, casos de uso, «include», «extend» com ponto de extensão e generalização de atores.</p>
+            <details id="lara-roteiro">
+              <summary>Roteiro em texto (alternativa acessível)</summary>
+              <div>
+                <ol>
+                  <li><strong>O problema:</strong> materiais espalhados entre e-mail, grupo, drive e celular.</li>
+                  <li><strong>A decisão:</strong> criar um portal com uma página por disciplina.</li>
+                  <li><strong>Fronteira do sistema:</strong> o retângulo que separa o que o portal faz do que está fora dele.</li>
+                  <li><strong>Atores:</strong> Estudante, Professor, Dupla responsável e YouTube (sistema externo).</li>
+                  <li><strong>Casos de uso:</strong> funcionalidades iniciadas por verbo, como Visualizar disciplinas e Acessar disciplina.</li>
+                  <li><strong>«include» e «extend»:</strong> o include é obrigatório (a seta vai do caso base para o incluído); o extend é opcional (a seta vai do caso que estende para o caso base), com o ponto de extensão "estudante clica no vídeo".</li>
+                  <li><strong>Generalização:</strong> Estudante e Professor herdam do ator geral Visitante.</li>
+                  <li><strong>Moral e erros comuns:</strong> o diagrama mostra quem usa o sistema e para quê; não é fluxograma, usa verbos e respeita o sentido das setas.</li>
+                </ol>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <div class="grade-videos">
+          <article class="cartao-video">
+            <a class="miniatura" href="https://www.youtube.com/watch?v=ab6eDdwS3rA" target="_blank" rel="noopener" aria-label="Assistir no YouTube: Tutorial de Diagramas de Caso de Uso UML">
+              <img src="https://i.ytimg.com/vi/ab6eDdwS3rA/hqdefault.jpg" alt="Miniatura do vídeo Tutorial de Diagramas de Caso de Uso UML" loading="lazy" onerror="this.remove()">
+              <span class="capa" aria-hidden="true"><small>Lucid Software</small><strong>Casos de uso</strong></span>
+              <span class="play" aria-hidden="true">▶</span>
+            </a>
+            <div class="corpo-video">
+              <span class="selo ciano">Unidade 1</span>
+              <h3>Tutorial de Diagramas de Caso de Uso UML</h3>
+              <p class="ficha">Lucid Software Português · YouTube · 2019</p>
+              <p>Monta um diagrama completo passo a passo: fronteira do sistema, atores primários e secundários, associações, «include», «extend» com ponto de extensão e generalização, com boas práticas no final.</p>
+              <a class="botao-video" href="https://www.youtube.com/watch?v=ab6eDdwS3rA" target="_blank" rel="noopener">Assistir no YouTube</a>
+            </div>
+          </article>
+          <article class="cartao-video">
+            <a class="miniatura" href="https://www.youtube.com/watch?v=rDidOn6KN9k" target="_blank" rel="noopener" aria-label="Assistir no YouTube: Tutorial de Diagramas de Classes UML">
+              <img src="https://i.ytimg.com/vi/rDidOn6KN9k/hqdefault.jpg" alt="Miniatura do vídeo Tutorial de Diagramas de Classes UML" loading="lazy" onerror="this.remove()">
+              <span class="capa" aria-hidden="true"><small>Lucid Software</small><strong>Diagrama de classes</strong></span>
+              <span class="play" aria-hidden="true">▶</span>
+            </a>
+            <div class="corpo-video">
+              <span class="selo ciano">Unidade 3</span>
+              <h3>Tutorial de Diagramas de Classes UML</h3>
+              <p class="ficha">Lucid Software Português · YouTube · 11 min · 2018</p>
+              <p>Usa um carrinho de compras on-line para mostrar classes, atributos, métodos, visibilidade, herança, agregação, composição e multiplicidade.</p>
+              <a class="botao-video" href="https://www.youtube.com/watch?v=rDidOn6KN9k" target="_blank" rel="noopener">Assistir no YouTube</a>
+            </div>
+          </article>
+          <article class="cartao-video">
+            <a class="miniatura" href="https://www.youtube.com/watch?v=iMV1aHaijhQ" target="_blank" rel="noopener" aria-label="Assistir no YouTube: Observer, teoria, Padrões de Projeto parte 41">
+              <img src="https://i.ytimg.com/vi/iMV1aHaijhQ/hqdefault.jpg" alt="Miniatura do vídeo Observer Teoria, Padrões de Projeto" loading="lazy" onerror="this.remove()">
+              <span class="capa" aria-hidden="true"><small>Otávio Miranda</small><strong>Padrão Observer</strong></span>
+              <span class="play" aria-hidden="true">▶</span>
+            </a>
+            <div class="corpo-video">
+              <span class="selo ciano">Unidade 5</span>
+              <h3>Observer — Teoria (Padrões de Projeto, parte 41/45)</h3>
+              <p class="ficha">Otávio Miranda · YouTube · 11 min · 2020</p>
+              <p>Explica o padrão Observer do catálogo GoF: quando um objeto muda de estado, todos os objetos que dependem dele são avisados automaticamente.</p>
+              <a class="botao-video" href="https://www.youtube.com/watch?v=iMV1aHaijhQ" target="_blank" rel="noopener">Assistir no YouTube</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== 4. REFERÊNCIAS (ABNT, em abas) ===== -->
+      <section class="secao-materia" id="referencias">
+        <h2>Referências</h2>
+        <p class="apoio">Fontes no padrão ABNT (NBR 6023:2018), separadas por tipo.</p>
+        <div class="abas" role="tablist" aria-label="Tipos de referência">
+          <button type="button" role="tab" id="aba-livros" aria-controls="ref-livros" aria-selected="true">Livros <span class="qtd">6</span></button>
+          <button type="button" role="tab" id="aba-artigos" aria-controls="ref-artigos" aria-selected="false" tabindex="-1">Artigos científicos <span class="qtd">5</span></button>
+          <button type="button" role="tab" id="aba-noticias" aria-controls="ref-noticias" aria-selected="false" tabindex="-1">Notícias <span class="qtd">2</span></button>
+          <button type="button" role="tab" id="aba-videos" aria-controls="ref-videos" aria-selected="false" tabindex="-1">Vídeos <span class="qtd">3</span></button>
+        </div>
+
+        <div class="painel-ref" id="ref-livros" role="tabpanel" aria-labelledby="aba-livros">
+          <h3>Livros</h3>
+          <ol class="lista-abnt">
+            <li>BOOCH, G.; RUMBAUGH, J.; JACOBSON, I. <strong>UML</strong>: guia do usuário. 2. ed. Rio de Janeiro: Elsevier, 2006.</li>
+            <li>FOWLER, M. <strong>Refactoring</strong>: improving the design of existing code. 2. ed. Boston: Addison-Wesley, 2018.</li>
+            <li>GAMMA, E. <em>et al.</em> <strong>Padrões de projeto</strong>: soluções reutilizáveis de software orientado a objetos. Porto Alegre: Bookman, 2000.</li>
+            <li>GUEDES, G. T. A. <strong>UML 2</strong>: uma abordagem prática. 3. ed. São Paulo: Novatec, 2018.</li>
+            <li>PRESSMAN, R. S.; MAXIM, B. R. <strong>Engenharia de software</strong>: uma abordagem profissional. 8. ed. Porto Alegre: AMGH, 2016.</li>
+            <li>SOMMERVILLE, I. <strong>Engenharia de software</strong>. 10. ed. São Paulo: Pearson, 2018.</li>
+          </ol>
+        </div>
+
+        <div class="painel-ref" id="ref-artigos" role="tabpanel" aria-labelledby="aba-artigos">
+          <h3>Artigos científicos</h3>
+          <ol class="lista-abnt">
+            <li>ABASE, A. H.; HASSAN, H. A.; OMARA, F. A. Smart requirements modeling: AI-assisted automated generation of UML diagrams from software specifications. <strong>Egyptian Informatics Journal</strong>, v. 34, art. 101003, 2026. DOI: <a href="https://doi.org/10.1016/j.eij.2026.101003" target="_blank" rel="noopener">10.1016/j.eij.2026.101003</a>.
+              <span class="nota-ref">Pesquisa recente que gera diagramas UML a partir de requisitos escritos em linguagem natural; mostra que a IA depende de requisitos bem escritos.</span></li>
+            <li>BECK, K.; CUNNINGHAM, W. A laboratory for teaching object-oriented thinking. <strong>ACM SIGPLAN Notices</strong>, v. 24, n. 10, p. 1-6, out. 1989. DOI: <a href="https://doi.org/10.1145/74877.74879" target="_blank" rel="noopener">10.1145/74877.74879</a>.
+              <span class="nota-ref">Artigo que apresentou os cartões CRC, usados na Unidade 4.</span></li>
+            <li>BROOKS, F. P. No silver bullet: essence and accidents of software engineering. <strong>Computer</strong>, v. 20, n. 4, p. 10-19, abr. 1987. DOI: <a href="https://doi.org/10.1109/MC.1987.1663532" target="_blank" rel="noopener">10.1109/MC.1987.1663532</a>.
+              <span class="nota-ref">Separa as dificuldades essenciais e acidentais do software, base da discussão sobre a crise do software.</span></li>
+            <li>GOTEL, O. C. Z.; FINKELSTEIN, A. C. W. An analysis of the requirements traceability problem. In: IEEE INTERNATIONAL CONFERENCE ON REQUIREMENTS ENGINEERING, 1., 1994, Colorado Springs. <strong>Proceedings</strong> [...]. Los Alamitos: IEEE, 1994. p. 94-101. DOI: <a href="https://doi.org/10.1109/ICRE.1994.292398" target="_blank" rel="noopener">10.1109/ICRE.1994.292398</a>.
+              <span class="nota-ref">Fundamenta a rastreabilidade de requisitos, tema da Unidade 2.</span></li>
+            <li>PARNAS, D. L. On the criteria to be used in decomposing systems into modules. <strong>Communications of the ACM</strong>, v. 15, n. 12, p. 1053-1058, dez. 1972. DOI: <a href="https://doi.org/10.1145/361598.361623" target="_blank" rel="noopener">10.1145/361598.361623</a>.
+              <span class="nota-ref">Origem do conceito de ocultação de informação, base de coesão e modularidade.</span></li>
+          </ol>
+        </div>
+
+        <div class="painel-ref" id="ref-noticias" role="tabpanel" aria-labelledby="aba-noticias">
+          <h3>Notícias</h3>
+          <ol class="lista-abnt">
+            <li>OBJECT MANAGEMENT GROUP. <strong>Object Management Group approves final adoption of the SysML v2 specification</strong>. [<em>S. l.</em>], 21 jul. 2025. Disponível em: <a href="https://www.omg.org/news/releases/pr2025/07-21-25.htm" target="_blank" rel="noopener">https://www.omg.org/news/releases/pr2025/07-21-25.htm</a>. Acesso em: 29 out. 2026.
+              <span class="nota-ref">A OMG, mesma organização que mantém a UML, aprovou a versão final da SysML v2, linguagem de modelagem de sistemas.</span></li>
+            <li>SALDANHA, T. Quando a IA deixa de ajudar a programar e passa a fazer parte da engenharia de software. <strong>TI INSIDE Online</strong>, [<em>S. l.</em>], 22 out. 2026. Disponível em: <a href="https://tiinside.com.br/22/10/2026/quando-a-ia-deixa-de-ajudar-a-programar-e-passa-a-fazer-parte-da-engenharia-de-software-2/" target="_blank" rel="noopener">https://tiinside.com.br/22/10/2026/quando-a-ia-deixa-de-ajudar-a-programar-e-passa-a-fazer-parte-da-engenharia-de-software-2/</a>. Acesso em: 29 out. 2026.
+              <span class="nota-ref">Com a IA escrevendo parte do código, o trabalho humano migra para requisitos, arquitetura e validação, justamente o foco da disciplina.</span></li>
+          </ol>
+        </div>
+
+        <div class="painel-ref" id="ref-videos" role="tabpanel" aria-labelledby="aba-videos">
+          <h3>Vídeos</h3>
+          <ol class="lista-abnt">
+            <li>LUCID SOFTWARE PORTUGUÊS. <strong>Tutorial de diagramas de caso de uso UML</strong>. [<em>S. l.</em>]: YouTube, 25 abr. 2019. 1 vídeo. Disponível em: <a href="https://www.youtube.com/watch?v=ab6eDdwS3rA" target="_blank" rel="noopener">https://www.youtube.com/watch?v=ab6eDdwS3rA</a>. Acesso em: 22 out. 2026.</li>
+            <li>LUCID SOFTWARE PORTUGUÊS. <strong>Tutorial de diagramas de classes UML</strong>. [<em>S. l.</em>]: YouTube, 21 dez. 2018. 1 vídeo (11 min). Disponível em: <a href="https://www.youtube.com/watch?v=rDidOn6KN9k" target="_blank" rel="noopener">https://www.youtube.com/watch?v=rDidOn6KN9k</a>. Acesso em: 22 out. 2026.</li>
+            <li>MIRANDA, O. <strong>Observer teoria</strong>: padrões de projeto, parte 41/45. [<em>S. l.</em>]: YouTube, 30 set. 2020. 1 vídeo (11 min). Disponível em: <a href="https://www.youtube.com/watch?v=iMV1aHaijhQ" target="_blank" rel="noopener">https://www.youtube.com/watch?v=iMV1aHaijhQ</a>. Acesso em: 22 out. 2026.</li>
+          </ol>
+        </div>
+      </section>
+    </main>
+    <footer class="rodape">
+      <p>&copy; 2026 Curso de Sistemas de Informação - Isulpar</p>
+    </footer>
+</body>
+</html>

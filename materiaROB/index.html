@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nome da Matéria</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../img/icon.png" type="image/x-icon">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <script>
+        if (localStorage.getItem('tema') === 'claro') {
+            document.body.classList.add('tema-claro');
+        }
+    </script>
+    <header class="topo">
+        <div class="container-topo">
+            <a href="../index.html" class="link-logo" aria-label="Sistemas de Informação - Início">
+                <img src="../img/logo-si.png" alt="Logo de Sistemas de Informação" class="logo-principal">
+            </a>
+            <nav aria-label="Navegação Principal">
+                <a href="../index.html">Início</a>
+                <button id="btn-tema" type="button">Tema</button>
+            </nav>
+        </div>
+    </header>
+    <main class="conteudo">
+        <section class="hero-curso">
+            <h1 class="titulo-onda">Robótica</h1>
+            <p class="tema-claro">Feito por: Nicolas Silveira e Nykolas Guth</p>
+        </section>
+
+
+        <!-- ADICIONEM O CONTEÚDO DOS TÓPICOS A PARTIR DAQUI -->
+
+        <section class="secao-materia">
+            <h2>Resumo da matéria</h2>
+            <p>A robótica é uma área da tecnologia que combina conhecimentos de engenharia, computação, eletrônica e
+                mecânica para desenvolver máquinas capazes de executar tarefas de maneira automática ou
+                semiautomática.<br>
+
+                Seu principal objetivo é criar sistemas robóticos que possam auxiliar seres humanos em diferentes
+                atividades, desde processos industriais até aplicações domésticas, médicas e científicas.<br>
+
+                Os robôs podem ser programados para realizar movimentos, identificar objetos, interpretar informações do
+                ambiente e tomar decisões com base em instruções ou dados recebidos por sensores. Para isso, utilizam
+                componentes como motores, controladores, sensores e softwares específicos.<br>
+
+                Atualmente, a robótica desempenha um papel importante na automação de processos, contribuindo para
+                aumentar a produtividade, melhorar a precisão de determinadas atividades e reduzir a exposição humana a
+                tarefas perigosas.<br>
+
+                Com o avanço da inteligência artificial e das tecnologias de automação, os sistemas robóticos estão se
+                tornando cada vez mais sofisticados, ampliando suas possibilidades de aplicação na sociedade..</p>
+        </section>
+
+        <section class="secao-materia">
+            <h2>Ementa</h2>
+
+            <div class="grade-cards">
+
+                <div class="card-ementa">
+                    <h3>01. Introdução à Robótica</h3>
+                    <p>
+                        Conceitos fundamentais, origem e evolução
+                        histórica da robótica.
+                    </p>
+                </div>
+
+                <div class="card-ementa">
+                    <h3>02. Componentes de um Robô</h3>
+                    <p>
+                        Estudo de sensores, motores, controladores
+                        e estruturas mecânicas.
+                    </p>
+                </div>
+
+                <div class="card-ementa">
+                    <h3>03. Programação e Controle</h3>
+                    <p>
+                        Fundamentos da programação e controle
+                        de movimentos robóticos.
+                    </p>
+                </div>
+
+                <div class="card-ementa">
+                    <h3>04. Sensores e Percepção</h3>
+                    <p>
+                        Como os robôs identificam e interpretam
+                        informações do ambiente.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="secao-materia">
+            <h2>Vídeos</h2>
+
+            <div class="grade-videos">
+
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/C19Yi_JEDE4" title="Vídeo de Robótica 1"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/sv9dDtYnE1g" title="Vídeo de Robótica 2"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="secao-materia">
+            <h2>Referências</h2>
+            <p>CRAIG, John J. Introduction to Robotics: Mechanics and Control. 3. ed. Upper Saddle River: Pearson
+                Prentice Hall, 2005.<br>
+                SICILIANO, Bruno et al. Robotics: Modelling, Planning and Control. London: Springer, 2009.<br>
+                NIKU, Saeed B. Introduction to Robotics: Analysis, Control, Applications. 2. ed. Hoboken: John Wiley &
+                Sons, 2011..</p>
+        </section>
+    </main>
+    <footer class="rodape">
+        <p>&copy; 2026 Curso de Sistemas de Informação - Isulpar</p>
+    </footer>
+</body>
+
+</html>
