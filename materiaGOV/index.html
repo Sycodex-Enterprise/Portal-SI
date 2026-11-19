@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Governança em TI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../img/icon.png" type="image/x-icon">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <script>
+        if (localStorage.getItem('tema') === 'claro') {
+            document.body.classList.add('tema-claro');
+        }
+    </script>
+    <header class="topo">
+        <div class="container-topo">
+            <a href="../index.html" class="link-logo" aria-label="Sistemas de Informação Inicio">
+                <img src="../img/logo-si.png" alt="Logo de Sistemas de Informação" class="logo-principal">
+            </a>
+            <nav aria-label="Navegação Principal">
+                <a href="../index.html">Inicio</a>
+                <button id="btn-tema" type="button">Tema</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="conteudo">
+        <section class="hero-curso">
+            <h1 class="titulo-onda">Governança em TI</h1>
+            <p>Feito por: Gustavo e Matheus</p>
+        </section>
+
+        <!-- 1º Resumo da Matéria -->
+        <section class="secao-transparente">
+            <h2 class="inverter-titulo titulo-destaque">Resumo da Matéria</h2>
+            <p class="inverter-texto texto-justificado">
+                A disciplina de Governança em TI desenvolve a capacidade de compreender, projetar, avaliar e aperfeiçoar estruturas de governança de TI, com foco na governança e segurança de ambientes BYOD. O curso ensina a distinguir governança, gestão e operação, relacionando as decisões tecnológicas à estratégia, à geração de valor, aos riscos e às partes interessadas. A formação integra segurança, proteção de dados e gestão de riscos, além de promover o uso crítico, ético, rastreável e autoral de inteligência artificial na construção progressiva de planos de governança.
+            </p>
+        </section>
+
+        <!-- 2º Ementa (Box Escura) -->
+        <section class="box-escura">
+            <h2>Ementa</h2>
+            <div class="grid-ementa">
+                <div>
+                    <ul class="lista-ementa">
+                        <li>Fundamentos da governança de tecnologia da informação e distinção entre governança, gestão e operação.</li>
+                        <li>Estratégia, geração e preservação de valor, partes interessadas, estruturas decisórias, papéis e prestação de contas.</li>
+                        <li>Governança do uso de dispositivos pessoais - BYOD.</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="lista-ementa">
+                        <li>Segurança e arquitetura de redes, identidade digital, autorização, menor privilégio e confiança verificada.</li>
+                        <li>Gestão de riscos, proteção de dados, conformidade, indicadores e resposta a incidentes.</li>
+                        <li>Uso crítico, ético, rastreável e autoral de inteligência artificial como auxiliar na produção.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3º Vídeos Didáticos -->
+        <section class="secao-transparente mt-40">
+            <h2 class="inverter-titulo titulo-destaque">Vídeos Didáticos</h2>
+            <div class="videos-container">
+                <div class="video-card">
+                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/P4nNJk76xFo?si=zmnBfCOOf6XlU1Mq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="video-titulo-container">
+                        <h3>Os pilares da Governança em TI</h3>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/l7bNXClfjuY?si=xzl1AOaqDxJb7FOT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="video-titulo-container">
+                        <h3>Segurança em Ambientes BYOD</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4º Referências ABNT -->
+        <section class="referencias-container">
+            <h2 class="titulo-destaque">Referências</h2>
+            
+            <h3 class="subtitulo-referencia">Bibliografia Básica</h3>
+            <div class="referencia-item basica">
+                <p>INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. <strong>ISO/IEC 38500:2024 Information technology: Governance of IT for the organization</strong>. Geneva: ISO, 2024.</p>
+                <p>ISACA. <strong>COBIT 2019 Framework: Governance and Management Objectives</strong>. Schaumburg: ISACA, 2018/2019.</p>
+                <p>ROSE, S. et al. <strong>NIST SP 800-207: Zero Trust Architecture</strong>. Gaithersburg: NIST, 2020.</p>
+            </div>
+
+            <h3 class="subtitulo-referencia complementar">Bibliografia Complementar</h3>
+            <div class="referencia-item complementar">
+                <p>CYBERSECURITY AND INFRASTRUCTURE SECURITY AGENCY. <strong>Zero Trust Maturity Model - Version 2.0</strong>. Washington, DC: CISA, 2023.</p>
+                <p>BRASIL. <strong>Lei nº 13.709, de 14 de agosto de 2018 - Lei Geral de Proteção de Dados Pessoais</strong>. Texto compilado.</p>
+                <p>MORAES, Alexandre Fernandes de. <strong>Cibersegurança e a nova geração de firewalls</strong>. São Paulo: Érica, 2021.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; 2026 Curso de Sistemas de Informação - Isulpar</p>
+    </footer>
+</body>
+</html>

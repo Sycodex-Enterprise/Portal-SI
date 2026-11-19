@@ -33,7 +33,7 @@ const disciplinas = [
   {
     nome: 'Governança de TI',
     autores: 'Matheus e Gustavo',
-    url: 'disciplina-6.html',
+    url: 'materiaGOV/index.html',
     imagem: 'img/foto-gov.jpg'
   },
   {
