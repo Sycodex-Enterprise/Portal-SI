@@ -1,64 +1,71 @@
 :root {
-      --bg-escuro-1: #060913;
-      --bg-escuro-2: #0f172a;
-      --bg-card: rgba(17, 25, 45, 0.85);
-      --neon-ciano: #00f2fe;
-      --neon-azul: #4facfe;
-      --neon-roxo: #7c3aed;
-      --texto-claro: #f1f5f9;
-      --texto-suave: #94a3b8;
-      --borda-sutil: rgba(0, 242, 254, 0.22);
-      --foco: #f59e0b;
+    --bg-escuro-1: #060913;
+    --bg-escuro-2: #0f172a;
+    --bg-card: rgba(17, 25, 45, 0.85);
+    --neon-ciano: #00f2fe;
+    --neon-azul: #4facfe;
+    --neon-roxo: #7c3aed;
+    --texto-claro: #f1f5f9;
+    --texto-suave: #94a3b8;
+    --borda-sutil: rgba(0, 242, 254, 0.22);
+    --foco: #f59e0b;
 }
+
 * {
-      box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 body {
-      margin: 0;
-      font-family: 'Segoe UI', system-ui, Arial, sans-serif;
-      color: var(--texto-claro);
-      background-color: var(--bg-escuro-1);
-      background-image:
-          radial-gradient(circle at 12% 18%, rgba(0, 242, 254, 0.14) 0%, transparent 38%),
-          radial-gradient(circle at 88% 82%, rgba(124, 58, 237, 0.16) 0%, transparent 42%),
-          linear-gradient(160deg, var(--bg-escuro-1) 0%, var(--bg-escuro-2) 55%, #090d1a 100%);
-      background-attachment: fixed;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', system-ui, Arial, sans-serif;
+    color: var(--texto-claro);
+    background-color: var(--bg-escuro-1);
+    background-image:
+        radial-gradient(circle at 12% 18%, rgba(0, 242, 254, 0.14) 0%, transparent 38%),
+        radial-gradient(circle at 88% 82%, rgba(124, 58, 237, 0.16) 0%, transparent 42%),
+        linear-gradient(160deg, var(--bg-escuro-1) 0%, var(--bg-escuro-2) 55%, #090d1a 100%);
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
 body.tema-claro {
-background-color: #f1f5f9;
+    background-color: #f1f5f9;
     background-image: none;
     --bg-card: #11192d;
     color: #0f172a;
     --texto-suave: #1e293b;
 }
+
 body.tema-claro header.topo,
 body.tema-claro footer.rodape {
-      background: #060913;
-      color: #94a3b8;
+    background: #060913;
+    color: #94a3b8;
 }
+
 header.topo {
-      background: rgba(6, 9, 19, 0.88);
-      backdrop-filter: blur(10px);
-      color: var(--texto-claro);
-      padding: 12px 24px;
-      border-bottom: 1px solid var(--borda-sutil);
-      box-shadow: 0 4px 25px rgba(0, 242, 254, 0.08);
-      position: sticky;
-      top: 0;
-      z-index: 100;
+    background: rgba(6, 9, 19, 0.88);
+    backdrop-filter: blur(10px);
+    color: var(--texto-claro);
+    padding: 12px 24px;
+    border-bottom: 1px solid var(--borda-sutil);
+    box-shadow: 0 4px 25px rgba(0, 242, 254, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
+
 .container-topo {
-      width: min(1100px, 92%);
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     gap: 15px;
 }
+
 .link-logo {
     display: flex;
     align-items: center;
@@ -66,9 +73,11 @@ header.topo {
     transition: transform 0.25s ease;
     background: transparent !important;
 }
+
 .link-logo:hover {
     transform: scale(1.05);
 }
+
 .logo-principal {
     height: 52px;
     width: auto;
@@ -78,6 +87,7 @@ header.topo {
     border: none !important;
     filter: drop-shadow(0 0 8px rgba(0, 242, 254, 0.45));
 }
+
 header.topo nav a,
 header.topo nav button {
     color: var(--texto-claro);
@@ -92,16 +102,19 @@ header.topo nav button {
     cursor: pointer;
     transition: color 0.25s ease, text-shadow 0.25s ease;
 }
+
 header.topo nav a:hover,
 header.topo nav button:hover {
     color: var(--neon-ciano);
     text-shadow: 0 0 10px rgba(0, 242, 254, 0.8);
 }
+
 main {
     width: min(1100px, 92%);
     margin: 36px auto;
     flex: 1;
 }
+
 .hero-curso {
     text-align: center;
     padding: 20px 24px;
@@ -110,6 +123,7 @@ main {
     border: none !important;
     box-shadow: none !important;
 }
+
 .hero-curso p {
     font-size: 1.12rem;
     color: var(--texto-suave);
@@ -117,6 +131,7 @@ main {
     margin: 0 auto;
     line-height: 1.6;
 }
+
 .hero-curso h1.titulo-onda {
     display: inline-block;
     font-size: 2.8rem;
@@ -132,14 +147,17 @@ main {
     filter: drop-shadow(0 0 16px rgba(0, 242, 254, 0.45));
     animation: ondaCores 3s ease-in-out infinite alternate;
 }
+
 @keyframes ondaCores {
     0% {
-           background-position: 0% 50%;
+        background-position: 0% 50%;
     }
+
     100% {
-           background-position: 100% 50%;
+        background-position: 100% 50%;
     }
 }
+
 section.secao-materia {
     padding: 20px 24px;
     margin: 20px 0;
@@ -150,10 +168,12 @@ section.secao-materia {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
     color: var(--texto-claro);
 }
+
 section.secao-materia h2 {
     color: var(--neon-ciano);
     margin-top: 0;
 }
+
 .img-conteudo {
     display: block;
     margin: 18px auto;
@@ -162,11 +182,13 @@ section.secao-materia h2 {
     border-radius: 10px;
     border: 1px solid var(--borda-sutil);
 }
+
 a:focus-visible,
 button:focus-visible {
     outline: 4px solid var(--foco);
     outline-offset: 3px;
 }
+
 footer.rodape {
     background: rgba(6, 9, 19, 0.95);
     color: var(--texto-suave);
@@ -176,12 +198,14 @@ footer.rodape {
     border-top: 1px solid var(--borda-sutil);
     font-size: 0.95rem;
 }
+
 @media (max-width: 560px) {
     .logo-principal {
-          height: 44px;
+        height: 44px;
     }
+
     .hero-curso h1.titulo-onda {
-          font-size: 1.7rem;
+        font-size: 1.7rem;
     }
 }
 
@@ -198,19 +222,24 @@ footer.rodape {
     --aps-borda: rgba(0, 242, 254, 0.18);
     line-height: 1.7;
 }
+
 .secao-materia h2 {
     font-size: 1.6rem;
     letter-spacing: .5px;
 }
+
 .secao-materia h3 {
     color: var(--aps-texto);
 }
+
 .secao-materia a {
     color: var(--neon-azul);
 }
+
 .secao-materia .apoio {
     color: var(--aps-apoio);
 }
+
 details summary:focus-visible {
     outline: 4px solid var(--foco);
     outline-offset: 3px;
@@ -223,6 +252,7 @@ details summary:focus-visible {
     text-align: justify;
     hyphens: auto;
 }
+
 .resumo-texto p:first-of-type::first-letter {
     float: left;
     font-size: 3.2rem;
@@ -232,6 +262,7 @@ details summary:focus-visible {
     color: var(--neon-ciano);
     text-shadow: 0 0 12px rgba(0, 242, 254, .5);
 }
+
 .palavras-chave {
     display: flex;
     flex-wrap: wrap;
@@ -241,6 +272,7 @@ details summary:focus-visible {
     list-style: none;
     border-top: 1px dashed var(--aps-borda);
 }
+
 .palavras-chave li {
     font-size: .85rem;
     padding: 4px 12px;
@@ -249,6 +281,7 @@ details summary:focus-visible {
     color: var(--neon-ciano);
     background: rgba(0, 242, 254, .06);
 }
+
 .palavras-chave li:first-child {
     border: none;
     background: none;
@@ -265,14 +298,17 @@ details summary:focus-visible {
     flex-wrap: wrap;
     margin-bottom: 6px;
 }
+
 .ementa-topo p {
     margin: 0;
     max-width: 640px;
 }
+
 .carrossel-controles {
     display: flex;
     gap: 8px;
 }
+
 .carrossel-controles button {
     width: 44px;
     height: 44px;
@@ -284,10 +320,12 @@ details summary:focus-visible {
     cursor: pointer;
     transition: background .2s ease, box-shadow .2s ease;
 }
+
 .carrossel-controles button:hover {
     background: rgba(0, 242, 254, .2);
     box-shadow: 0 0 14px rgba(0, 242, 254, .35);
 }
+
 .carrossel {
     display: grid;
     grid-auto-flow: column;
@@ -302,9 +340,13 @@ details summary:focus-visible {
     scrollbar-width: thin;
     scrollbar-color: var(--neon-ciano) transparent;
 }
+
 @media (prefers-reduced-motion: reduce) {
-    .carrossel { scroll-behavior: auto; }
+    .carrossel {
+        scroll-behavior: auto;
+    }
 }
+
 .unidade {
     scroll-snap-align: start;
     position: relative;
@@ -314,6 +356,7 @@ details summary:focus-visible {
     border: 1px solid var(--aps-borda);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, .06);
 }
+
 .unidade .num-unidade {
     display: inline-block;
     font-size: .78rem;
@@ -322,6 +365,7 @@ details summary:focus-visible {
     text-transform: uppercase;
     color: var(--foco);
 }
+
 .unidade .num-grande {
     position: absolute;
     top: 6px;
@@ -332,16 +376,19 @@ details summary:focus-visible {
     color: transparent;
     -webkit-text-stroke: 1px rgba(0, 242, 254, .35);
 }
+
 .unidade h3 {
     margin: 6px 56px 12px 0;
     font-size: 1.12rem;
     line-height: 1.3;
 }
+
 .unidade ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
+
 .unidade li {
     position: relative;
     padding-left: 18px;
@@ -349,6 +396,7 @@ details summary:focus-visible {
     font-size: .95rem;
     color: var(--aps-texto);
 }
+
 .unidade li::before {
     content: "";
     position: absolute;
@@ -360,11 +408,13 @@ details summary:focus-visible {
     background: var(--neon-ciano);
     box-shadow: 0 0 6px var(--neon-ciano);
 }
+
 .carrossel-pontos {
     display: flex;
     justify-content: center;
     gap: 8px;
 }
+
 .carrossel-pontos span {
     width: 8px;
     height: 8px;
@@ -372,31 +422,37 @@ details summary:focus-visible {
     background: rgba(255, 255, 255, .2);
     transition: background .2s, transform .2s;
 }
+
 .carrossel-pontos span.ativo {
     background: var(--neon-ciano);
     transform: scale(1.3);
 }
+
 .ementa-objetivos {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
     margin-top: 22px;
 }
-.ementa-objetivos > div {
+
+.ementa-objetivos>div {
     padding: 16px 18px;
     border-radius: 12px;
     background: var(--aps-card);
     border-top: 3px solid var(--neon-roxo);
 }
+
 .ementa-objetivos h3 {
     margin: 0 0 8px;
     font-size: 1rem;
     color: #c4b5fd;
 }
+
 .ementa-objetivos p,
 .ementa-objetivos ul {
     margin: 0;
 }
+
 .ementa-objetivos ul {
     padding-left: 18px;
 }
@@ -412,6 +468,7 @@ details summary:focus-visible {
     border: 1px solid var(--aps-borda);
     margin: 14px 0 26px;
 }
+
 .video-destaque video {
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -419,6 +476,7 @@ details summary:focus-visible {
     background: #000;
     display: block;
 }
+
 .selo {
     display: inline-block;
     font-size: .72rem;
@@ -431,47 +489,57 @@ details summary:focus-visible {
     color: #060913;
     margin-bottom: 8px;
 }
+
 .selo.ciano {
     background: rgba(0, 242, 254, .15);
     color: var(--neon-ciano);
 }
+
 .video-destaque h3 {
     margin: 4px 0 6px;
     font-size: 1.3rem;
 }
+
 .ficha {
     font-size: .88rem;
     color: var(--aps-apoio);
     margin: 0 0 10px;
 }
+
 .secao-materia details {
     margin-top: 10px;
     border: 1px solid var(--aps-borda);
     border-radius: 10px;
     background: rgba(0, 0, 0, .2);
 }
+
 .secao-materia summary {
     cursor: pointer;
     padding: 10px 14px;
     font-weight: 700;
     color: var(--neon-ciano);
 }
+
 .secao-materia details[open] summary {
     border-bottom: 1px solid var(--aps-borda);
 }
-.secao-materia details > div {
+
+.secao-materia details>div {
     padding: 10px 14px 14px;
 }
+
 .secao-materia details ol,
 .secao-materia details ul {
     margin: 0;
     padding-left: 20px;
 }
+
 .grade-videos {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
 }
+
 .cartao-video {
     display: flex;
     flex-direction: column;
@@ -481,11 +549,13 @@ details summary:focus-visible {
     border: 1px solid rgba(255, 255, 255, .08);
     transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
+
 .cartao-video:hover {
     transform: translateY(-4px);
     border-color: var(--aps-borda);
     box-shadow: 0 10px 24px rgba(0, 242, 254, .12);
 }
+
 .miniatura {
     position: relative;
     display: block;
@@ -496,6 +566,7 @@ details summary:focus-visible {
         linear-gradient(135deg, #0f172a, #1e1b4b);
     overflow: hidden;
 }
+
 .miniatura img {
     position: absolute;
     inset: 0;
@@ -504,6 +575,7 @@ details summary:focus-visible {
     object-fit: cover;
     z-index: 1;
 }
+
 .miniatura .capa {
     position: absolute;
     left: 14px;
@@ -511,6 +583,7 @@ details summary:focus-visible {
     bottom: 10px;
     line-height: 1.25;
 }
+
 .miniatura .capa small {
     display: block;
     font-size: .72rem;
@@ -518,9 +591,11 @@ details summary:focus-visible {
     text-transform: uppercase;
     color: var(--aps-apoio);
 }
+
 .miniatura .capa strong {
     color: var(--aps-texto);
 }
+
 .miniatura .play {
     position: absolute;
     top: 50%;
@@ -538,28 +613,34 @@ details summary:focus-visible {
     background: var(--neon-ciano);
     box-shadow: 0 0 20px rgba(0, 242, 254, .6);
 }
+
 .cartao-video .corpo-video {
     padding: 14px 16px 16px;
     display: flex;
     flex-direction: column;
     flex: 1;
 }
+
 .cartao-video h3 {
     margin: 4px 0 6px;
     font-size: 1.02rem;
     line-height: 1.35;
 }
+
 .cartao-video p {
     margin: 0 0 8px;
     font-size: .93rem;
 }
+
 .corpo-video .selo {
     align-self: flex-start;
 }
+
 .cartao-video .botao-video {
     margin-top: auto;
     align-self: flex-start;
 }
+
 .botao-video {
     display: inline-block;
     padding: 9px 16px;
@@ -569,6 +650,7 @@ details summary:focus-visible {
     color: #060913 !important;
     background: linear-gradient(90deg, var(--neon-ciano), var(--neon-azul));
 }
+
 .botao-video:hover {
     box-shadow: 0 0 16px rgba(0, 242, 254, .5);
 }
@@ -580,6 +662,7 @@ details summary:focus-visible {
     margin: 10px 0 0;
     border-bottom: 1px solid var(--aps-borda);
 }
+
 .abas button {
     font: inherit;
     font-weight: 700;
@@ -592,11 +675,13 @@ details summary:focus-visible {
     color: var(--aps-apoio);
     cursor: pointer;
 }
+
 .abas button[aria-selected="true"] {
     color: var(--neon-ciano);
     background: rgba(0, 242, 254, .08);
     border-color: var(--aps-borda);
 }
+
 .abas button .qtd {
     display: inline-block;
     min-width: 22px;
@@ -606,29 +691,35 @@ details summary:focus-visible {
     font-size: .75rem;
     background: rgba(255, 255, 255, .1);
 }
+
 .painel-ref {
     padding: 16px 4px 0;
 }
+
 .painel-ref[hidden] {
     display: none;
 }
+
 .painel-ref h3 {
     margin: 0 0 10px;
     font-size: 1.05rem;
     color: var(--neon-ciano);
 }
+
 .lista-abnt {
     margin: 0;
     padding: 0;
     list-style: none;
     counter-reset: ref;
 }
+
 .lista-abnt li {
     position: relative;
     padding: 10px 0 10px 40px;
     border-bottom: 1px solid rgba(255, 255, 255, .06);
     overflow-wrap: anywhere;
 }
+
 .lista-abnt li::before {
     counter-increment: ref;
     content: counter(ref);
@@ -645,37 +736,42 @@ details summary:focus-visible {
     color: var(--neon-ciano);
     border: 1px solid var(--aps-borda);
 }
+
 .lista-abnt .nota-ref {
     display: block;
     margin-top: 4px;
     font-size: .88rem;
     color: var(--aps-apoio);
 }
+
 /* sem JavaScript, as abas somem e todas as listas aparecem uma embaixo da outra */
 .abas {
     display: none;
 }
+
 .js .abas {
     display: flex;
 }
 
-/* ---------- Fundo do topo (estilo azul da versão anterior) ----------
-   "main .hero-curso" tem prioridade maior que a regra base, sem alterá-la.
-   O box continua escuro também no tema claro, como pede a documentação. */
+/* ---------- Fundo do topo (padrão oficial do site) ---------- */
 main .hero-curso {
     padding: 44px 24px !important;
     border-radius: 16px;
-    background:
-        linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px) 0 0 / 32px 32px,
-        linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px) 0 0 / 32px 32px,
-        linear-gradient(135deg, #0b1f3a 0%, #12345b 55%, #1765a3 100%) !important;
+    background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(23, 37, 84, 0.6)) !important;
     border: 1px solid var(--borda-sutil) !important;
     border-bottom: 3px solid var(--neon-ciano) !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .45), 0 0 20px rgba(0, 242, 254, .1) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 0 20px rgba(0, 242, 254, 0.1) !important;
 }
+
+body.tema-claro main .hero-curso {
+    background: linear-gradient(145deg, #0f172a, #172554) !important;
+}
+
 main .hero-curso p {
-    color: #d5e3f2;
+    font-size: 1.12rem;
+    color: #94a3b8;
 }
+
 main .hero-curso .info-materia li {
     color: #d5e3f2;
     background: rgba(255, 255, 255, .08);
@@ -693,6 +789,7 @@ main .hero-curso .info-materia li {
     list-style: none;
     max-width: 760px;
 }
+
 .info-materia li {
     padding: 6px 14px;
     border-radius: 8px;
@@ -712,6 +809,7 @@ main .hero-curso .info-materia li {
     list-style: none;
     counter-reset: etapa;
 }
+
 .fluxo li {
     position: relative;
     text-align: center;
@@ -720,6 +818,7 @@ main .hero-curso .info-materia li {
     background: rgba(0, 242, 254, .07);
     border: 1px solid var(--aps-borda);
 }
+
 .fluxo li:not(:last-child)::after {
     content: "›";
     position: absolute;
@@ -730,36 +829,44 @@ main .hero-curso .info-materia li {
     font-weight: 900;
     z-index: 1;
 }
+
 .fluxo li:last-child {
     background: rgba(245, 158, 11, .12);
     border-color: rgba(245, 158, 11, .5);
 }
+
 .fluxo strong {
     display: block;
     font-size: .95rem;
     color: var(--aps-texto);
 }
+
 .fluxo span {
     font-size: .82rem;
     color: var(--aps-apoio);
 }
+
 .fluxo-legenda {
     text-align: center;
     font-size: .88rem;
     margin: 8px 0 0;
 }
+
 @media (max-width: 900px) {
     .fluxo {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+
     .fluxo li:nth-child(3)::after {
         display: none;
     }
 }
+
 @media (max-width: 560px) {
     .fluxo {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
     .fluxo li::after {
         display: none;
     }
@@ -770,32 +877,40 @@ main .hero-curso .info-materia li {
     .grade-videos {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
     .video-destaque {
         grid-template-columns: minmax(0, 1fr);
     }
+
     .carrossel {
         grid-auto-columns: minmax(250px, 46%);
     }
 }
+
 @media (max-width: 560px) {
     section.secao-materia {
         padding: 18px 16px;
     }
+
     .resumo-texto p {
         text-align: left;
     }
+
     .grade-videos,
     .ementa-objetivos {
         grid-template-columns: minmax(0, 1fr);
     }
+
     .carrossel {
         grid-auto-columns: 86%;
     }
+
     .abas button {
         flex: 1 1 auto;
         padding: 10px 8px;
         font-size: .88rem;
     }
+
     .video-destaque {
         padding: 12px;
     }

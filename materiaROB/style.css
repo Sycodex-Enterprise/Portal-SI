@@ -117,11 +117,17 @@ main {
 
 .hero-curso {
     text-align: center;
-    padding: 20px 24px;
+    padding: 44px 24px;
     margin-bottom: 38px;
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
+    background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(23, 37, 84, 0.6));
+    border-radius: 16px;
+    border: 1px solid var(--borda-sutil);
+    border-bottom: 3px solid var(--neon-ciano);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 0 20px rgba(0, 242, 254, 0.1);
+}
+
+body.tema-claro .hero-curso {
+    background: linear-gradient(145deg, #0f172a, #172554);
 }
 
 .hero-curso h1 {
@@ -149,7 +155,7 @@ main {
 
 .hero-curso p {
     font-size: 1.12rem;
-    color: var(--texto-suave);
+    color: #94a3b8;
     max-width: 720px;
     margin: 0 auto;
     line-height: 1.6;
