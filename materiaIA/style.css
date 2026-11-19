@@ -11,8 +11,15 @@
     --foco: #f59e0b;
 }
 
-\* {
+* {
     box-sizing: border-box;
+}
+
+/* ADICIONADO: trava o scroll horizontal e evita espaço vazio lateral no celular */
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 body {
@@ -27,44 +34,22 @@ body {
     min-height: 100vh;
 }
 
+/* ALTERADO: mantém os cards escuros no tema claro seguindo o padrão do portal e de Robótica */
 body.tema-claro {
     background-color: #f1f5f9 !important;
     background-image: none !important;
-    --bg-card: #ffffff;
+    --bg-card: #11192d;
     color: #0f172a;
-    --texto-suave: #334155;
-    --texto-claro: #0f172a;
+}
+
+body.tema-claro .hero-curso {
+    background: linear-gradient(145deg, #0f172a, #172554);
 }
 
 body.tema-claro header.topo,
 body.tema-claro footer.rodape {
     background: #060913;
     color: #94a3b8;
-}
-
-body.tema-claro section.secao-materia {
-    background: #ffffff;
-    border-color: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-body.tema-claro .texto-resumo p,
-body.tema-claro .card-topico p,
-body.tema-claro .info-video p,
-body.tema-claro .lista-abnt li {
-    color: #334155;
-}
-
-body.tema-claro .card-topico,
-body.tema-claro .card-video,
-body.tema-claro .box-categoria {
-    background: #f8fafc;
-    border-color: rgba(0, 0, 0, 0.08);
-}
-
-body.tema-claro .card-topico h3,
-body.tema-claro .subtitulo-categoria {
-    color: #0f172a;
 }
 
 header.topo {
@@ -132,7 +117,8 @@ header.topo nav button:hover {
     color: var(--neon-ciano);
     text-shadow: 0 0 10px rgba(0, 242, 254, 0.8);
 }
- main.conteudo {
+
+main.conteudo {
     width: min(1100px, 92%);
     margin: 36px auto;
     flex: 1;
@@ -200,6 +186,7 @@ section.secao-materia h2 {
     margin-bottom: 20px;
     font-size: 1.6rem;
 }
+
 .texto-resumo p {
     line-height: 1.8;
     font-size: 1.05rem;
@@ -395,6 +382,9 @@ section.secao-materia h2 {
     font-size: 0.95rem;
     color: #cbd5e1;
     line-height: 1.5;
+    /* ADICIONADO: força a quebra de URLs longas no celular para não empurrar o layout */
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .lista-abnt li:last-child {
