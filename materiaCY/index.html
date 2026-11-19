@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CyberGuard 3D - Sistemas de Informação</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <script>
+        if (localStorage.getItem('tema') === 'claro') {
+            document.body.classList.add('tema-claro');
+        }
+    </script>
+
+    <header class="topo">
+        <div class="container-topo">
+            <a href="../index.html" class="link-logo" aria-label="Sistemas de Informação Inicio">
+                <img src="../img/logo-si.png" alt="Logo de Sistemas de Informação" class="logo-principal">
+            </a>
+            <nav aria-label="Navegação Principal">
+                <a href="../index.html">Inicio</a>
+                <button id="btn-tema" type="button">Tema</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="conteudo">
+
+        <!-- APRESENTAÇÃO -->
+
+        <section class="hero-curso">
+            <h1 class="titulo-onda">CyberGuard 3D</h1>
+            <p class="autores">Feito por: Heloysa e Lidiane</p>
+
+            <!-- LINK EXATO INFORMADO PARA ABRIR O JOGO -->
+
+            <a class="botao-jogar" href="https://cyberguard3d.rf.gd/" target="_blank" rel="noopener noreferrer">
+                JOGAR CYBERGUARD 3D
+            </a>
+
+        </section>
+
+        <!-- RESUMO -->
+
+        <section class="secao-materia resumo">
+
+            <h2>Resumo da matéria</h2>
+
+            <p>
+                A segurança da informação é uma área da tecnologia responsável
+                por proteger dados, sistemas, redes e dispositivos contra
+                acessos não autorizados, alterações indevidas, ataques e
+                possíveis perdas de informações.
+            </p>
+
+            <p>
+                No projeto CyberGuard 3D, esses conceitos são apresentados
+                por meio de um ambiente virtual interativo. O jogador assume
+                o papel de um profissional de segurança digital e precisa
+                investigar equipamentos, identificar vulnerabilidades e
+                compreender como ameaças podem comprometer um ambiente
+                tecnológico.
+            </p>
+
+            <p>
+                Durante as atividades, são trabalhados conceitos como
+                confidencialidade, integridade, disponibilidade, autenticação,
+                criptografia, protocolos de rede, firewall, malware e
+                mecanismos de defesa. O objetivo é aproximar os conteúdos
+                teóricos de situações práticas, estimulando o raciocínio
+                lógico, a investigação e a tomada de decisões.
+            </p>
+        </section>
+
+        <!-- EMENTA -->
+
+        <section class="secao-materia">
+
+            <h2>Ementa</h2>
+
+            <p class="introducao-secao">
+                Os conteúdos abordados no CyberGuard 3D estão organizados
+                nos seguintes temas:
+            </p>
+
+            <div class="ementa-grid">
+
+                <article class="ementa-card">
+                    <span class="card-numero">01</span>
+                    <h3>Fundamentos da Segurança</h3>
+                    <p>
+                        Confidencialidade, integridade, disponibilidade,
+                        autenticidade, autorização e não repúdio.
+                    </p>
+                </article>
+
+                <article class="ementa-card">
+                    <span class="card-numero">02</span>
+                    <h3>Criptografia</h3>
+                    <p>
+                        Criptografia simétrica e assimétrica, AES, RSA,
+                        hash, SHA-256 e assinatura digital.
+                    </p>
+                </article>
+
+                <article class="ementa-card">
+                    <span class="card-numero">03</span>
+                    <h3>Certificação Digital</h3>
+                    <p>
+                        Certificados digitais e funcionamento da
+                        ICP-Brasil.
+                    </p>
+                </article>
+
+                <article class="ementa-card">
+                    <span class="card-numero">04</span>
+                    <h3>Protocolos de Rede</h3>
+                    <p>
+                        TCP, UDP, IP, ARP, ICMP, HTTP, HTTPS, SSH,
+                        SMTP, DNS e FTP.
+                    </p>
+                </article>
+
+                <article class="ementa-card">
+                    <span class="card-numero">05</span>
+                    <h3>Proteção de Redes</h3>
+                    <p>
+                        Firewall, regras de acesso, portas e mecanismos
+                        de proteção de redes.
+                    </p>
+                </article>
+
+                <article class="ementa-card">
+                    <span class="card-numero">06</span>
+                    <h3>Detecção de Ameaças</h3>
+                    <p>
+                        IDS, IPS, HIDS, NIPS, identificação de malware
+                        e análise de vulnerabilidades.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- FUNCIONAMENTO DO JOGO -->
+
+        <section class="secao-materia">
+
+            <h2>Como funciona o CyberGuard 3D?</h2>
+
+            <p>
+                O jogador entra em um ambiente tridimensional e participa
+                de missões relacionadas à segurança da informação.
+                Durante a exploração, encontra equipamentos e situações
+                que exigem investigação e análise.
+            </p>
+
+            <div class="personagens-grid">
+
+                <article class="personagem-card">
+                    <h3>Analista</h3>
+                    <p>
+                        Investiga dispositivos, identifica possíveis
+                        ameaças, registra evidências e realiza diagnósticos.
+                    </p>
+                </article>
+
+                <article class="personagem-card">
+                    <h3>Investigador</h3>
+                    <p>
+                        Analisa evidências e realiza ações de correção
+                        e limpeza dos equipamentos infectados.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- VÍDEOS -->
+
+        <section class="secao-materia">
+
+            <h2>Vídeos</h2>
+
+            <p class="introducao-secao">
+                Materiais audiovisuais relacionados à aprendizagem
+                de segurança digital e conscientização sobre ameaças.
+            </p>
+
+            <div class="videos-grid">
+
+                <article class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube-nocookie.com/embed/dMhtkfimq1I"
+                            title="Vídeo educativo de cibersegurança" loading="lazy" allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <h3>Aprendizado em cibersegurança</h3>
+
+                    <p>
+                        Conteúdo educativo relacionado à identificação
+                        de ameaças e à segurança digital.
+                    </p>
+                </article>
+
+                <article class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube-nocookie.com/embed/ySDpQtAapVU"
+                            title="CyberCIEGE - Segurança da informação" loading="lazy" allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <h3>CyberCIEGE</h3>
+
+                    <p>
+                        Exemplo de aprendizagem de segurança da informação
+                        por meio de simulações e desafios.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- REFERÊNCIAS -->
+
+        <section class="secao-materia referencias">
+
+            <h2>Referências</h2>
+
+            <p>
+                NAVAL POSTGRADUATE SCHOOL.
+                <strong>CyberCIEGE</strong>.
+                Disponível em:
+                <a href="https://my.nps.edu/web/c3o/cyberciege" target="_blank" rel="noopener noreferrer">
+                    https://my.nps.edu/web/c3o/cyberciege
+                </a>.
+                Acesso em: 16 nov. 2026.
+            </p>
+
+            <p>
+                KC7 FOUNDATION.
+                <strong>KC7</strong>.
+                Disponível em:
+                <a href="https://kc7cyber.com/" target="_blank" rel="noopener noreferrer">
+                    https://kc7cyber.com/
+                </a>.
+                Acesso em: 16 nov. 2026.
+            </p>
+
+            <p>
+                THOMPSON, M. F.; IRVINE, C. E.
+                <strong>CyberCIEGE Scenario Design and Implementation</strong>.
+                USENIX.
+            </p>
+
+            <p>
+                MICROSOFT.
+                <strong>Gamifying breaks barriers</strong>.
+                Microsoft Unlocked.
+                Disponível em:
+                <a href="https://unlocked.microsoft.com/" target="_blank" rel="noopener noreferrer">
+                    https://unlocked.microsoft.com/
+                </a>.
+                Acesso em: 16 nov. 2026.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; 2026 Curso de Sistemas de Informação - Isulpar</p>
+    </footer>
+
+</body>
+
+</html>

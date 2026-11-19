@@ -21,7 +21,7 @@ const disciplinas = [
   {
     nome: 'Cibersegurança',
     autores: 'Heloyse e Lidiane',
-    url: 'disciplina-4.html',
+    url: 'materiaCY/index.html',
     imagem: 'img/foto-ciber.jpg'
   },
   {
