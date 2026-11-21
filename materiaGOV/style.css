@@ -321,6 +321,13 @@ body.tema-claro .box-escura {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
+.video-card iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
 .video-titulo-container {
     padding: 15px;
     background: var(--bg-card);
